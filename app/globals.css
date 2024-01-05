@@ -2,3 +2,182 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Start Project initialization */
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*::-moz-selection,
+*::selection {
+  @apply bg-primary text-white;
+}
+
+*::-webkit-scrollbar {
+  @apply w-[8px];
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-[#ccc];
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-primary border-r-[8px];
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+.overflowNone {
+  @apply overflow-hidden;
+}
+
+a {
+  @apply no-underline;
+}
+
+ul {
+  list-style: none;
+  @apply m-0 p-0;
+}
+
+:focus-visible {
+  outline: unset;
+}
+
+/* font  */
+/* Don't forget to add fonts ⭐ */
+@font-face {
+  font-family: 'TajawalRegular';
+  src: url('../src/assets/fonts/Tajawal-Regular.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TajawalMedium';
+  src: url('../src/assets/fonts/Tajawal-Medium.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TajawalBold';
+  src: url('../src/assets/fonts/Tajawal-Bold.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TajawalLight';
+  src: url('../src/assets/fonts/Tajawal-Light.ttf');
+  font-display: swap;
+}
+
+body,
+* {
+  font-family: 'TajawalRegular', sans-serif;
+}
+
+/* @font-face {
+  font-family: 'Din-Next';
+  src: url('./fonts/');
+  font-display: swap;
+} */
+
+@layer base {
+  :root {
+    --background: #f9f7f7;
+    --primary: #2260aa;
+    --secondary: #eea62e;
+    --main: #4f4f4f;
+    --border: #4f4f4f;
+    --input: #6d51391c;
+    --textGray: #b0b0b0;
+  }
+}
+
+/* End Project initialization */
+
+/* Start Navbar Section*/
+.overflowNone {
+  overflow: hidden;
+}
+
+.navbar .hamburger {
+  @apply hidden;
+}
+
+.navbar .hamburger.active {
+  @apply transition-all duration-300 ease-in-out delay-500 rotate-45;
+}
+
+.navbar .hamburger.active .line:nth-child(1) {
+  @apply translate-y-[6.5px];
+}
+
+.navbar .hamburger.active .line:nth-child(2) {
+  @apply w-0;
+}
+
+.navbar .hamburger.active .line:nth-child(3) {
+  @apply translate-y-[-15px] rotate-90;
+}
+
+.navbar .hamburger .line {
+  @apply w-[30px] h-[3px] bg-primary block mx-auto my-2 transition-all duration-300 ease-in-out;
+}
+
+/* navbar media query */
+@media (max-width: 999px) {
+  .navbar .hamburger {
+    @apply !block !cursor-pointer;
+  }
+
+  .navbar .nav-contain {
+    @apply w-full absolute z-50 h-[100vh] top-[110px] overflow-y-scroll left-[-100%] bg-white flex-col justify-start py-[10px] pl-[20px] transition-all duration-300 ease-linear rtl:left-[-100%] rtl:right-[unset] rtl:transition-all;
+  }
+
+  .navbar .nav-contain.active-nav {
+    @apply rtl:left-[unset] rtl:right-0 left-0 right-[unset];
+  }
+
+  .navbar .nav-contain.active-nav .nav-item {
+    @apply text-end;
+  }
+
+  .navbar .nav-contain .navbar-nav {
+    @apply w-full flex-col justify-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .nav-contain {
+    @apply !px-4;
+  }
+}
+
+/* End Navbar Section */
+
+/* Start custom styles Swiper */
+.swiper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url('/assets/images/pattern1.png') center/cover repeat-x;
+  z-index: 9;
+  overflow: hidden;
+  animation: movePatternX 50s linear infinite;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+  @apply !bottom-0 !bg-white;
+}
+
+.swiper-pagination-bullet {
+  @apply !rounded-[8px];
+}
+
+.swiper-pagination-bullet-active {
+  @apply !w-[35px];
+}
+
+/* End custom styles Swiper */

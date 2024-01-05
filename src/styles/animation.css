@@ -1,0 +1,23 @@
+@keyframes movePatternX {
+  0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: 2000px;
+  }
+}
+
+@keyframes movePattern {
+  0% {
+    background-position-y: 4000px;
+  }
+
+  100% {
+    background-position-y: 0px;
+  }
+}
+
+.animation-translateY {
+  @apply hover:transform hover:translate-y-[-7px] transition-all duration-300 ease-linear;
+}
