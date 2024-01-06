@@ -52,7 +52,7 @@ const Navbar = () => {
               <SwitchLanguage />
             </div>
             <div className='w-full hidden xs:!justify-start  justify-center tablet:flex tablet:mt-4 '>
-              <div className='tablet:w-[18rem]'>نص من عندي</div>
+              {/* <div className='tablet:w-[18rem]'>نص من عندي</div> */}
             </div>
           </div>
 
