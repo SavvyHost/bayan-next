@@ -326,3 +326,20 @@ body,
 }
 
 /* End Album in Album*/
+
+/* Start Contact us */
+
+.Contact-us-style {
+  background: url('/assets/images/hello-map-pattern.webp') center/cover repeat-x;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  /* animation: movePatternX 55s linear infinite; */
+}
+
+.text-stroke-custom {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary);
+}
+/* End Contact us */

@@ -1,7 +1,8 @@
+import ArticlesImportant from '@/components/template/articles/ArticlesImportant';
 import React from 'react';
 
 function ArticlesPage() {
-  return <div>ArticlesPage</div>;
+  return <ArticlesImportant />;
 }
 
 export default ArticlesPage;
