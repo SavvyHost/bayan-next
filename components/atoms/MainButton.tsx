@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface mainButtonProps {
-  title: string;
+  title?: string;
 }
 
 const MainButton: React.FC<mainButtonProps> = ({ title }) => {

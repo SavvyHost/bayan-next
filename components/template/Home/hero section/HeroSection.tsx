@@ -18,7 +18,7 @@ import MainButton from '@/components/atoms/MainButton';
 
 const HeroSection = () => {
   return (
-    <>
+    <div className='here-section'>
       <Swiper
         dir={'rtl'}
         slidesPerView={1}
@@ -103,7 +103,7 @@ const HeroSection = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

@@ -76,6 +76,10 @@ body,
   font-family: 'TajawalRegular', sans-serif;
 }
 
+body {
+  height: 7000px;
+}
+
 /* @font-face {
   font-family: 'Din-Next';
   src: url('./fonts/');
@@ -95,6 +99,15 @@ body,
 }
 
 /* End Project initialization */
+
+/* Start Global Styles */
+.custom-box-shadow {
+  box-shadow: 0px 2px 8.3px 0px rgba(0, 0, 0, 0.2);
+}
+.custom-box-shadow-2 {
+  box-shadow: 0px 1px 9.8px 0px rgba(0, 0, 0, 0.14);
+}
+/* End Global Styles */
 
 /* Start Navbar Section*/
 .overflowNone {
@@ -157,7 +170,7 @@ body,
 /* End Navbar Section */
 
 /* Start custom styles Swiper */
-.swiper {
+.here-section .swiper {
   width: 100%;
   position: relative;
   display: flex;
@@ -181,3 +194,33 @@ body,
 }
 
 /* End custom styles Swiper */
+
+/* Start Style Articles */
+.articles-pattern {
+  width: 100%;
+  position: relative;
+  background: url('/assets/images/images 9.png') center/cover repeat-y;
+  z-index: 9;
+  overflow: hidden;
+  animation: movePattern 90s linear infinite;
+}
+/* End Style Articles */
+
+/* Start Customer Review */
+.customer-review-style .swiper-wrapper {
+  padding-bottom: 2.5rem !important;
+}
+
+@media (min-width: 1280px) {
+  .customer-review-style .swiper-slide.swiper-slide-next > div {
+    width: 400px !important;
+    height: 285px !important;
+    min-width: 400px !important;
+    min-height: 285px !important;
+  }
+  .customer-review-style .swiper-slide.swiper-slide-next > div > div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+/* End Customer Review */
