@@ -76,10 +76,6 @@ body,
   font-family: 'TajawalRegular', sans-serif;
 }
 
-body {
-  height: 7000px;
-}
-
 /* @font-face {
   font-family: 'Din-Next';
   src: url('./fonts/');
@@ -224,3 +220,29 @@ body {
   }
 }
 /* End Customer Review */
+
+/* Start Footer Section */
+.footer-section {
+  width: 100%;
+  position: relative;
+  background: url('/assets/images/patternfooter.png') center/cover repeat-x;
+  z-index: 9;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .footer-section {
+    animation: movePatternX 55s linear infinite;
+  }
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2260aa;
+  opacity: 0.6;
+  z-index: -1;
+}
+/* End Footer Section */
