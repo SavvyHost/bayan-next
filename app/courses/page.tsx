@@ -1,7 +1,12 @@
+import CompleteCourses from '@/components/template/courses/CompleteCourses';
 import React from 'react';
 
 function CoursesPage() {
-  return <div>CoursesPage</div>;
+  return (
+    <>
+      <CompleteCourses />
+    </>
+  );
 }
 
 export default CoursesPage;
