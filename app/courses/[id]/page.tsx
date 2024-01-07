@@ -2,20 +2,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import ArrowLeft from '@/components/atoms/icons/ArrowLeft';
 import TrainersCard from '@/components/molecules/TrainersCard/TrainersCard';
-import React from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import { Pagination } from 'swiper/modules';
-import CustomerCard from '@/components/molecules/CustomerCard/CustomerCard';
+import ArrorLeftBlue from '@/components/atoms/icons/ArrorLeftBlue';
 import CustomerOpinions from '@/components/template/Home/customer opinions/CustomerOpinions';
 import ImportantCourses from '@/components/template/Home/important courses/ImportantCourses';
 import Image from 'next/image';
-import Link from 'next/link';
-import ArrorLeftBlue from '@/components/atoms/icons/ArrorLeftBlue';
 const CoursesPageId = () => {
   return (
     <div className='container'>
