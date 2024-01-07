@@ -1,6 +1,5 @@
-import StarRate from '@/components/atoms/icons/StarRate';
 import StarRateActionSVG from '@/components/atoms/icons/StarRateAction';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const RateAction = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -8,11 +7,11 @@ const RateAction = () => {
 
   console.log(selectedId);
 
-  const handleHover = (id) => {
+  const handleHover = (id:any) => {
     setHoveredId(id);
   };
 
-  const handleClick = (id) => {
+  const handleClick = (id:any) => {
     setSelectedId(id);
     setHoveredId(null);
     console.log(`Clicked on Star ${id}`);
