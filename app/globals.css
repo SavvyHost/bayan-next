@@ -343,3 +343,14 @@ body,
   -webkit-text-stroke: 1px var(--primary);
 }
 /* End Contact us */
+
+/* Start Courses Details Page */
+.courses-details::before {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.44) 0%,
+    rgba(0, 0, 0, 0.73) 52.52%,
+    rgba(0, 0, 0, 0.75) 100%
+  ) !important;
+}
+/* End Courses Details Page */
