@@ -16,21 +16,22 @@ import ImportantCourses from '@/components/template/Home/important courses/Impor
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrorLeftBlue from '@/components/atoms/icons/ArrorLeftBlue';
-const ArticlesPageId = () => {
+const CoursesPageId = () => {
   return (
     <div className='container'>
-      <div className='grid grid-cols-12 gap-[60px] mt-[20px] mb-[100px] '>
+      {/* grid grid-cols-12 */}
+      <div className='flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[100px] '>
         <div className='col-span-8'>
-          <div className='flex gap-2 mb-[14px]'>
+          <h4 className='hidden gap-2 mb-[14px] text-[14px] md:flex'>
             دورة تعلم اللغة العربية
             <span>
               <ArrowLeft />
             </span>
             مدخل الي اللغه العربية
-          </div>
+          </h4>
 
           <div
-            className='py-[80px] px-[30px] max-h-[24px] rounded-[12px] w-full max-w-[900px] min-h-[450px] bg-cover bg-repeat-round highlights-style courses-details relative'
+            className='py-[80px] px-[30px] max-h-[24px] rounded-[12px] w-full max-w-[900px] md:min-h-[450px] min-h-[220px] bg-cover bg-repeat-round highlights-style courses-details relative'
             style={{
               backgroundImage: "url('/assets/images/article-details.webp')",
             }}
@@ -166,7 +167,7 @@ const ArticlesPageId = () => {
             </h5>
 
             <div
-              className='border-soild border-[1px] border-textGray custom-box-shadow-2 rounded-b-[8px] max-h-[480px] overflow-y-scroll'
+              className='border-soild border-[1px] overflow-x-hidden border-textGray custom-box-shadow-2 rounded-b-[8px] max-h-[480px] overflow-y-scroll'
               style={{
                 scrollbarWidth: 'thin',
                 scrollbarColor: '#2260aa #f0f0f0',
@@ -174,9 +175,9 @@ const ArticlesPageId = () => {
             >
               <button
                 type='button'
-                className='flex gap-3 hover:bg-background p-[10px] m-[2px]'
+                className='flex gap-3 hover:bg-background p-[10px] m-[2px] sm:w-full'
               >
-                <div>
+                <div className='sm:w-full'>
                   <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
                     الدرس الأول
                   </h5>
@@ -196,9 +197,34 @@ const ArticlesPageId = () => {
               </button>
               <button
                 type='button'
-                className='flex gap-3 hover:bg-background p-[10px] m-[2px]'
+                className='flex gap-3 hover:bg-background p-[10px] m-[2px] sm:w-full'
               >
-                <div>
+                <div className='sm:w-full'>
+                  <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
+                    الدرس الأول
+                  </h5>
+                  <p className='text-main font-[TajawalMedium,sans-serif] text-[15px] text-start'>
+                    مدخل الي اللغه العربية يساعدك علي فهم مبادئ اللغه. مدخل الي
+                    اللغه العربية يساعدك علي فهم مبادئ اللغه. مدخل الي اللغه
+                    العربية يساعدك علي فهم مبادئ اللغه.
+                  </p>
+                </div>
+
+                <div className='bg-[#69A8C93B] max-w-[82px] max-h-[82px]'>
+                  <Image
+                    src='/assets/images/Online learning concept.svg'
+                    width={110}
+                    height={110}
+                    alt='image'
+                  />
+                </div>
+              </button>
+
+              <button
+                type='button'
+                className='flex gap-3 hover:bg-background p-[10px] m-[2px] sm:w-full'
+              >
+                <div className='sm:w-full'>
                   <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
                     الدرس الأول
                   </h5>
@@ -216,11 +242,12 @@ const ArticlesPageId = () => {
                   />
                 </div>
               </button>
+
               <button
                 type='button'
-                className='flex gap-3 hover:bg-background p-[10px] m-[2px]'
+                className='flex gap-3 hover:bg-background p-[10px] m-[2px] sm:w-full'
               >
-                <div>
+                <div className='sm:w-full'>
                   <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
                     الدرس الأول
                   </h5>
@@ -238,55 +265,12 @@ const ArticlesPageId = () => {
                   />
                 </div>
               </button>
-              <button
-                type='button'
-                className='flex gap-3 hover:bg-background p-[10px] m-[2px]'
-              >
-                <div>
-                  <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
-                    الدرس الأول
-                  </h5>
-                  <p className='text-main font-[TajawalMedium,sans-serif] text-[15px] text-start'>
-                    مدخل الي اللغه العربية يساعدك علي فهم مبادئ اللغه.
-                  </p>
-                </div>
 
-                <div className='bg-[#69A8C93B]'>
-                  <Image
-                    src='/assets/images/Online learning concept.svg'
-                    width={110}
-                    height={110}
-                    alt='image'
-                  />
-                </div>
-              </button>
               <button
                 type='button'
-                className='flex gap-3 hover:bg-background p-[10px] m-[2px]'
+                className='flex gap-3 hover:bg-background p-[10px] m-[2px] sm:w-full'
               >
-                <div>
-                  <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
-                    الدرس الأول
-                  </h5>
-                  <p className='text-main font-[TajawalMedium,sans-serif] text-[15px] text-start'>
-                    مدخل الي اللغه العربية يساعدك علي فهم مبادئ اللغه.
-                  </p>
-                </div>
-
-                <div className='bg-[#69A8C93B]'>
-                  <Image
-                    src='/assets/images/Online learning concept.svg'
-                    width={110}
-                    height={110}
-                    alt='image'
-                  />
-                </div>
-              </button>
-              <button
-                type='button'
-                className='flex gap-3 hover:bg-background p-[10px] m-[2px]'
-              >
-                <div>
+                <div className='sm:w-full'>
                   <h5 className='text-primary font-[TajawalMedium,sans-serif] text-[20px] text-start'>
                     الدرس الأول
                   </h5>
@@ -307,64 +291,66 @@ const ArticlesPageId = () => {
             </div>
           </div>
 
-          {/*  */}
-          <div className='border-soild border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[24px]'>
-            <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
-              800.00LE
-            </h6>
+          <div className='sm:flex sm:gap-9 lg:flex-col lg:gap-0'>
+            {/*  */}
+            <div className='border-soild sm:w-full border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[24px]'>
+              <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
+                800.00LE
+              </h6>
 
-            <ul>
-              <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
-                <ArrorLeftBlue />
-                <span> إثني عشر محاضره شهريا</span>
-              </li>
-              <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
-                <ArrorLeftBlue />
-                <span>ساعة للمحاضرة</span>
-              </li>
-              <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
-                <ArrorLeftBlue />
-                <span>ثلاث حصص إسبوعيا</span>
-              </li>
-              <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
-                <ArrorLeftBlue />
-                <span>الطلاب</span>
-              </li>
-            </ul>
-          </div>
+              <ul>
+                <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
+                  <ArrorLeftBlue />
+                  <span> إثني عشر محاضره شهريا</span>
+                </li>
+                <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
+                  <ArrorLeftBlue />
+                  <span>ساعة للمحاضرة</span>
+                </li>
+                <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
+                  <ArrorLeftBlue />
+                  <span>ثلاث حصص إسبوعيا</span>
+                </li>
+                <li className='text-main font-[TajawalMedium,sans-serif] flex items-center gap-3'>
+                  <ArrorLeftBlue />
+                  <span>الطلاب</span>
+                </li>
+              </ul>
+            </div>
 
-          {/* اشترك معنا الان */}
-          <div className='border-soild border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[24px]'>
-            <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
-              إشترك معنا الأن
-            </h6>
+            {/* اشترك معنا الان */}
+            <div className='border-soild sm:w-full sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[24px]'>
+              <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
+                إشترك معنا الأن
+              </h6>
 
-            <ul className='flex gap-10 justify-center'>
-              <li>
-                <Image
-                  src='/assets/images/whatsapp (1).png'
-                  width={42}
-                  height={42}
-                  alt='social'
-                />
-              </li>
-              <li>
-                <Image
-                  src='/assets/images/Group 1000001805.svg'
-                  width={42}
-                  height={42}
-                  alt='social'
-                />
-              </li>
-              <li>
-                <Image
-                  src='/assets/images/telegram.png'
-                  width={42}
-                  height={42}
-                  alt='social'
-                />
-              </li>
-            </ul>
+              <ul className='flex gap-10 justify-center'>
+                <li>
+                  <Image
+                    src='/assets/images/whatsapp (1).png'
+                    width={42}
+                    height={42}
+                    alt='social'
+                  />
+                </li>
+                <li>
+                  <Image
+                    src='/assets/images/Group 1000001805.svg'
+                    width={42}
+                    height={42}
+                    alt='social'
+                  />
+                </li>
+                <li>
+                  <Image
+                    src='/assets/images/telegram.png'
+                    width={42}
+                    height={42}
+                    alt='social'
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -378,4 +364,4 @@ const ArticlesPageId = () => {
   );
 };
 
-export default ArticlesPageId;
+export default CoursesPageId;

@@ -11,7 +11,7 @@ import { Pagination } from 'swiper/modules';
 import CustomerCard from '@/components/molecules/CustomerCard/CustomerCard';
 const CustomerOpinions = () => {
   return (
-    <div className='container my-[144px] customer-review-style'>
+    <div className='container my-[80px] customer-review-style'>
       <div className='flex flex-col items-center mb-[50px]'>
         <h3 className='text-[29px] lg:text-[34px] text-primary font-[TajawalBold,sans-serif]'>
           أراء العملاء
