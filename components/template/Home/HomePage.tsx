@@ -12,9 +12,9 @@ const HomePage = () => {
       <HeroSection />
       <Aboutus />
       <ImportantCourses />
-      <ImportantArticles />
       <ImportantTrainers />
       <CustomerOpinions />
+      <ImportantArticles />
     </>
   );
 };

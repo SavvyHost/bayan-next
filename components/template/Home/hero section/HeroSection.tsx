@@ -33,6 +33,7 @@ const HeroSection = () => {
         }}
         pagination={{ clickable: true }}
         modules={[Pagination]}
+        className='!bg-[#eea62e]'
       >
         <SwiperSlide>
           <div className='container flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7'>
@@ -46,7 +47,7 @@ const HeroSection = () => {
                 مجتمع تعليمي تفاعلي
               </h3>
 
-              <p className='text-[16px]  md:!text-[20px] text-textGray font-[TajawalMedium,sans-serif] md:w-[90%] xl:!w-[70%]'>
+              <p className='text-[16px]  md:!text-[20px] text-textGray font-[TajawalMedium,sans-serif] md:w-[90%] xl:!w-[70%] text-white'>
                 معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
                 لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف
                 الذكية.
@@ -56,9 +57,6 @@ const HeroSection = () => {
                 <MainButton title='تعلم أكثر' />
               </div>
             </div>
-
-            {/* Image */}
-            {/* Image */}
             <div className='lg:me-9 flex !justify-center xl:!justify-end md:!order-2'>
               <img
                 className='!max-w-[300px] h-[300px] !max-h-[300px] md:!max-w-[450px] md:!max-h-[450px] w-full'
@@ -80,7 +78,7 @@ const HeroSection = () => {
                 مجتمع تعليمي تفاعلي
               </h3>
 
-              <p className='text-[16px]  md:!text-[20px] text-textGray font-[TajawalMedium,sans-serif] md:w-[90%] xl:!w-[70%]'>
+              <p className='text-[16px]  md:!text-[20px] text-textGray font-[TajawalMedium,sans-serif] md:w-[90%] xl:!w-[70%] !text-white'>
                 معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
                 لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف
                 الذكية.
