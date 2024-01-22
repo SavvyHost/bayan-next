@@ -33,12 +33,13 @@ const HeroSection = () => {
         }}
         pagination={{ clickable: true }}
         modules={[Pagination]}
-        // className="!bg-[#eea62e]"
+        className='!bg-[#2260AA] !object-contain bg-[url(/assets/images/heroslidernew.webp)]'
       >
         <SwiperSlide>
-          <div className="container flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7">
-            <div className="flex flex-col gap-1 order-2 md:!order-1">
-              <h2 className="text-primary font-[TajawalBold,sans-serif] text-[27px] md:text-[40px] lg:!text-[50px]">
+          <div className='container flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7'>
+            {/* content */}
+            <div className='flex flex-col gap-1 order-2 md:!order-1'>
+              <h2 className='text-[#EFBB43] font-[TajawalBold,sans-serif] text-[27px] md:text-[40px] lg:!text-[50px]'>
                 أكاديمية بيان
               </h2>
 
@@ -56,20 +57,20 @@ const HeroSection = () => {
                 <MainButton title="تعلم أكثر" />
               </div>
             </div>
-            <div className="lg:me-9 flex !justify-center xl:!justify-end md:!order-2">
+            {/* <div className='lg:me-9 flex !justify-center xl:!justify-end md:!order-2'>
               <img
                 className="!max-w-[300px] h-[300px] !max-h-[300px] md:!max-w-[450px] md:!max-h-[450px] w-full"
                 src="/assets/images/Group 11.svg"
                 alt="hero image"
               />
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="container flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7">
             {/* content */}
-            <div className="flex flex-col gap-1 order-2 md:!order-1">
-              <h2 className="text-primary font-[TajawalBold,sans-serif] text-[27px] md:text-[40px] lg:!text-[50px]">
+            <div className='flex flex-col gap-1 order-2 md:!order-1'>
+              <h2 className='text-[#EFBB43] font-[TajawalBold,sans-serif] text-[27px] md:text-[40px] lg:!text-[50px]'>
                 أكاديمية بيان
               </h2>
 
@@ -77,7 +78,7 @@ const HeroSection = () => {
                 مجتمع تعليمي تفاعلي
               </h3>
 
-              <p className="text-[16px]  md:!text-[20px] text-textGray font-[TajawalMedium,sans-serif] md:w-[90%] xl:!w-[70%] !text-white">
+              <p className='text-[16px]  md:!text-[20px] text-textGray font-[TajawalMedium,sans-serif] md:w-[90%] xl:!w-[70%] text-white'>
                 معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
                 لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف
                 الذكية.
@@ -87,16 +88,13 @@ const HeroSection = () => {
                 <MainButton title="تعلم أكثر" />
               </div>
             </div>
-
-            {/* Image */}
-            {/* Image */}
-            <div className="lg:me-9 flex !justify-center xl:!justify-end md:!order-2">
+            {/* <div className='lg:me-9 flex !justify-center xl:!justify-end md:!order-2'>
               <img
-                className="!max-w-[300px] h-[300px] !max-h-[300px] md:!max-w-[450px] md:!max-h-[450px] w-full"
-                src="/assets/images/hero-image1.png"
-                alt="hero image"
+                className='!max-w-[300px] h-[300px] !max-h-[300px] md:!max-w-[450px] md:!max-h-[450px] w-full'
+                src='/assets/images/Group 11.svg'
+                alt='hero image'
               />
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
       </Swiper>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const ImportantCourses = () => {
   return (
-    <div className='container my-[85px] '>
+    <div className='container my-[65px] '>
       <div className='flex flex-col items-center'>
         <h3 className='text-[29px] lg:text-[34px] text-primary font-[TajawalBold,sans-serif]'>
           أهم الدورات

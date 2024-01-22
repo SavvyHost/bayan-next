@@ -9,6 +9,9 @@ import ArrorLeftBlue from '@/components/atoms/icons/ArrorLeftBlue';
 import CustomerOpinions from '@/components/template/Home/customer opinions/CustomerOpinions';
 import ImportantCourses from '@/components/template/Home/important courses/ImportantCourses';
 import Image from 'next/image';
+import ClockFi from '@/components/atoms/icons/ClockFi';
+import Layers from '@/components/atoms/icons/Layers';
+import VectorStudent from '@/components/atoms/icons/VectorStudent';
 const CoursesPageId = () => {
   return (
     <div className='container'>
@@ -154,7 +157,7 @@ const CoursesPageId = () => {
         </div>
 
         <div className='col-span-4'>
-          <div>
+          {/* <div>
             <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-2'>
               الخطه الدراسية
             </h5>
@@ -282,11 +285,11 @@ const CoursesPageId = () => {
                 </div>
               </button>
             </div>
-          </div>
+          </div> */}
 
-          <div className='sm:flex sm:gap-9 lg:flex-col lg:gap-0'>
+          <div className='sm:flex sm:gap-2 flex-col lg:gap-0'>
             {/*  */}
-            <div className='border-soild sm:w-full border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[24px]'>
+            {/* <div className='border-soild sm:w-full border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]'>
               <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
                 800.00LE
               </h6>
@@ -309,10 +312,53 @@ const CoursesPageId = () => {
                   <span>الطلاب</span>
                 </li>
               </ul>
+            </div> */}
+            <div className='border-soild sm:w-full border-[1px] py-4 border-textGray custom-box-shadow-3 rounded-[8px] my-[12px] xl:my-[24px]'>
+              <p className='font-[TajawalBold,sans-serif] text-[#EEA62E] text-[24px] text-center'>
+                800.00 LE
+              </p>
+            </div>
+
+            <div className='border-soild sm:w-full border-[1px] py-4 border-textGray custom-box-shadow-3 rounded-[8px] my-[12px] xl:my-[24px]'>
+              <ul>
+                <li className='flex justify-center items-center gap-4 px-6'>
+                  <span className='text-[#EEA62E] text-[20px]'>12</span>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                    إثني عشر محاضره شهريا
+                  </p>
+                </li>
+                <hr className='my-[8px]' />
+                <li className='flex justify-center items-center gap-4 px-6'>
+                  <span className='text-[#EEA62E] text-[20px]'>
+                    <ClockFi />
+                  </span>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                    إثني عشر محاضره شهريا
+                  </p>
+                </li>
+                <hr className='my-[8px]' />
+                <li className='flex justify-center items-center gap-4 px-6'>
+                  <span className='text-[#EEA62E] text-[20px]'>
+                    <Layers />
+                  </span>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                    إثني عشر محاضره شهريا
+                  </p>
+                </li>
+                <hr className='my-[8px]' />
+                <li className='flex justify-center items-center gap-4 px-6'>
+                  <span className='text-[#EEA62E] text-[20px]'>
+                    <VectorStudent />
+                  </span>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                    إثني عشر محاضره شهريا
+                  </p>
+                </li>
+              </ul>
             </div>
 
             {/* اشترك معنا الان */}
-            <div className='border-soild sm:w-full sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[24px]'>
+            <div className='border-soild sm:w-full sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]'>
               <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
                 إشترك معنا الأن
               </h6>

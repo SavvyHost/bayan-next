@@ -103,6 +103,11 @@ body,
 .custom-box-shadow-2 {
   box-shadow: 0px 1px 9.8px 0px rgba(0, 0, 0, 0.14);
 }
+
+.custom-box-shadow-3 {
+  box-shadow: 0px 2px 8.8px 0px rgba(0, 0, 0, 0.05);
+}
+
 /* End Global Styles */
 
 /* Start Navbar Section*/
@@ -175,7 +180,21 @@ body,
   position: relative;
   display: flex;
   align-items: center;
-  background: url('/assets/images/pattern1.png') center/cover repeat-x;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  z-index: 9;
+  overflow: hidden;
+  /* animation: movePatternX 50s linear infinite; */
+}
+
+.about-me-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url('/assets/images/pattern-about-me.webp') center/cover repeat-x;
+  background-color: #2260aa;
   z-index: 9;
   overflow: hidden;
   animation: movePatternX 50s linear infinite;
@@ -236,12 +255,9 @@ body,
 
 @media (min-width: 768px) {
   .footer-section {
-    background: url('/assets/images/patternfooter.png') center/cover repeat-x;
-  }
-
-  .footer-section::before {
-    opacity: 0.6 !important;
-    background-color: #2260aa !important;
+    background: url('/assets/images/pattern-about-me.webp') center/cover
+      repeat-x;
+    background-color: var(--primary);
   }
 }
 
@@ -250,7 +266,7 @@ body,
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
   opacity: 1;
   z-index: -1;
 }
@@ -354,3 +370,68 @@ body,
   ) !important;
 }
 /* End Courses Details Page */
+
+/* How To Start */
+.how-to-start ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.how-to-start ul::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  background: #417ec0;
+  position: absolute;
+  right: 0px;
+  top: 13px;
+  height: calc(100% - (15px + 25px));
+}
+
+.how-to-start ul li {
+  position: relative;
+  padding-right: 25px;
+  margin-bottom: 15px;
+}
+
+.how-to-start ul li::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #417ec0;
+  border: 5px solid #dee6ee;
+  position: absolute;
+  right: -9px;
+  top: 5px;
+  border-radius: 10px;
+  animation: dotAnimation 5s infinite;
+}
+
+.how-to-start ul li:nth-child(1)::after {
+  animation-delay: 0s;
+}
+
+.how-to-start ul li:nth-child(2)::after {
+  animation-delay: 1.66s;
+}
+
+.how-to-start ul li:nth-child(3)::after {
+  animation-delay: 3.33s;
+}
+
+@keyframes dotAnimation {
+  0%,
+  80%,
+  100% {
+    background: #417ec0;
+    border: 5px solid #dee6ee;
+  }
+  40% {
+    background: #417ec0;
+    border: 5px solid #417ec0;
+  }
+}
+/* How To End */
