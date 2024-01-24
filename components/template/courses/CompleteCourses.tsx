@@ -46,7 +46,7 @@ const CompleteCourses = () => {
       </div>
 
       {/* Start Important Courses */}
-      <ImportantCourses />
+      <ImportantCourses courses={true} />
     </div>
   );
 };

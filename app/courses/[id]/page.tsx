@@ -12,6 +12,9 @@ import Image from 'next/image';
 import ClockFi from '@/components/atoms/icons/ClockFi';
 import Layers from '@/components/atoms/icons/Layers';
 import VectorStudent from '@/components/atoms/icons/VectorStudent';
+
+import { Autoplay } from 'swiper/modules';
+
 const CoursesPageId = () => {
   return (
     <div className='container'>
@@ -76,11 +79,16 @@ const CoursesPageId = () => {
           {/* Swiper */}
           <div className='mt-[60px]'>
             <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-[24px]'>
-              ماذا ستتعلم؟
+              المدربون
             </h5>
             <Swiper
               dir={'rtl'}
               slidesPerView={1}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
               breakpoints={{
                 300: {
                   slidesPerView: 1,
@@ -323,7 +331,7 @@ const CoursesPageId = () => {
               <ul>
                 <li className='flex justify-center items-center gap-4 px-6'>
                   <span className='text-[#EEA62E] text-[20px]'>12</span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
                     إثني عشر محاضره شهريا
                   </p>
                 </li>
@@ -332,7 +340,7 @@ const CoursesPageId = () => {
                   <span className='text-[#EEA62E] text-[20px]'>
                     <ClockFi />
                   </span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
                     إثني عشر محاضره شهريا
                   </p>
                 </li>
@@ -341,7 +349,7 @@ const CoursesPageId = () => {
                   <span className='text-[#EEA62E] text-[20px]'>
                     <Layers />
                   </span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
                     إثني عشر محاضره شهريا
                   </p>
                 </li>
@@ -350,7 +358,7 @@ const CoursesPageId = () => {
                   <span className='text-[#EEA62E] text-[20px]'>
                     <VectorStudent />
                   </span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[20px]'>
+                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
                     إثني عشر محاضره شهريا
                   </p>
                 </li>

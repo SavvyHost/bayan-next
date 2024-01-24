@@ -14,7 +14,7 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ removeOverFlow }) => {
   const activeLink = pathname;
 
   return (
-    <ul className='flex  gap-10 tablet:!gap-4 justify-center tablet:flex-col w-full'>
+    <ul className='flex  gap-6 xl:!gap-10 tablet:!gap-4 justify-center tablet:flex-col w-full'>
       {NavItems.map((item, index) => (
         <li
           key={index}

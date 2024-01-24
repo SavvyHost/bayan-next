@@ -111,7 +111,7 @@ const ArticlesImportant = () => {
             </p>
           </div>
 
-          <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-16 justify-items-center mt-[40px]'>
+          <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
             <div className='max-w-[340px] md:animation-translateY'>
               <SecondaryCard
                 img='/assets/images/courses3.webp'

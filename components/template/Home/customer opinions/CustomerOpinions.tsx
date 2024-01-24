@@ -7,8 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import CustomerCard from '@/components/molecules/CustomerCard/CustomerCard';
+
 const CustomerOpinions = () => {
   return (
     <div className='container my-[80px] customer-review-style'>
@@ -25,7 +26,10 @@ const CustomerOpinions = () => {
       <Swiper
         dir={'rtl'}
         slidesPerView={1}
-        loop
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         style={{
           //@ts-ignore
           '--swiper-pagination-color': '#2260AA',
@@ -35,7 +39,7 @@ const CustomerOpinions = () => {
           '--swiper-pagination-progressbar-size': '8px',
         }}
         pagination={{ clickable: true }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         breakpoints={{
           300: {
             slidesPerView: 1,
