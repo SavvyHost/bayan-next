@@ -447,3 +447,18 @@ body,
   }
 }
 /* How To End */
+
+/* Start Edit Slider Last Tasks */
+.swiper-wrapper .swiper-slide .hero-section-custom.firstSlide {
+  display: flex !important;
+}
+
+.swiper-wrapper .swiper-slide .hero-section-custom.firstSlide > div {
+  align-items: center !important;
+}
+
+.swiper-wrapper .swiper-slide .hero-section-custom.firstSlide > div p {
+  width: 50% !important;
+  text-align: center !important;
+}
+/* End Edit Slider Last Tasks */
