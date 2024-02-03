@@ -35,7 +35,7 @@ const HeroSection = () => {
         modules={[Pagination]}
       >
         <SwiperSlide
-          className={`!bg-[#2260AA] bg-no-repeat bg-cover !object-contain bg-[url(/assets/images/heroslidernew.webp)] `}
+          className={`!bg-[#2260AA] custom-slide-swipe bg-no-repeat bg-contain !object-contain bg-[url(/assets/images/heroslidernew.webp)]  `}
         >
           <div className='container firstSlide hero-section-custom flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7 '>
             {/* content */}
@@ -62,7 +62,7 @@ const HeroSection = () => {
         </SwiperSlide>
 
         <SwiperSlide
-          className={`}!bg-[#F9F7F7] bg-no-repeat bg-cover  !object-contain bg-[url(/assets/images/pattern1.png)] ${classes.swiper}`}
+          className={`!bg-[#F9F7F7] bg-no-repeat bg-cover  !object-contain bg-[url(/assets/images/pattern1.png)] ${classes.swiper}`}
         >
           <div className='container hero-section-custom flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7'>
             {/* content */}

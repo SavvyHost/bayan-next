@@ -77,7 +77,7 @@ const CoursesPageId = () => {
           </div>
 
           {/* Swiper */}
-          <div className='mt-[60px]'>
+          <div className='mt-[60px] '>
             <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-[24px]'>
               المدربون
             </h5>

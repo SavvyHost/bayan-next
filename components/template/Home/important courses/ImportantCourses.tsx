@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 // import required modules
 
 import { Autoplay } from 'swiper/modules';
+import MainButton from '@/components/atoms/MainButton';
 
 const ImportantCourses = ({ courses }: any) => {
   return (
@@ -26,56 +27,63 @@ const ImportantCourses = ({ courses }: any) => {
       </div>
 
       {!courses ? (
-        <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
-          <div className='max-w-[360px] md:animation-translateY'>
-            <MainCard
-              img='/assets/images/courses1.webp'
-              title='مدخل إلي اللغه العربيه'
-              description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
-              buttonContent='إنضم'
-            />
+        <>
+          <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
+            <div className='max-w-[360px] md:animation-translateY'>
+              <MainCard
+                img='/assets/images/courses1.webp'
+                title='مدخل إلي اللغه العربيه'
+                description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
+                buttonContent='إنضم'
+              />
+            </div>
+            <div className='max-w-[360px] animation-translateY'>
+              <MainCard
+                img='/assets/images/courses2.webp'
+                title='مدخل إلي اللغه العربيه'
+                description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
+                buttonContent='إنضم'
+              />
+            </div>
+            <div className='max-w-[360px] animation-translateY'>
+              <MainCard
+                img='/assets/images/courses3.webp'
+                title='مدخل إلي اللغه العربيه'
+                description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
+                buttonContent='إنضم'
+              />
+            </div>
+            <div className='max-w-[360px] animation-translateY'>
+              <MainCard
+                img='/assets/images/courses4.webp'
+                title='مدخل إلي اللغه العربيه'
+                description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
+                buttonContent='إنضم'
+              />
+            </div>
+            <div className='max-w-[360px] animation-translateY'>
+              <MainCard
+                img='/assets/images/courses5.webp'
+                title='مدخل إلي اللغه العربيه'
+                description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
+                buttonContent='إنضم'
+              />
+            </div>
+            <div className='max-w-[360px] animation-translateY'>
+              <MainCard
+                img='/assets/images/courses6.webp'
+                title='مدخل إلي اللغه العربيه'
+                description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
+                buttonContent='إنضم'
+              />
+            </div>
           </div>
-          <div className='max-w-[360px] animation-translateY'>
-            <MainCard
-              img='/assets/images/courses2.webp'
-              title='مدخل إلي اللغه العربيه'
-              description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
-              buttonContent='إنضم'
-            />
+          <div className='flex justify-center w-full'>
+            <div className='w-max h-[42px] mt-[30px]'>
+              <MainButton title='عرض المزيد' />
+            </div>
           </div>
-          <div className='max-w-[360px] animation-translateY'>
-            <MainCard
-              img='/assets/images/courses3.webp'
-              title='مدخل إلي اللغه العربيه'
-              description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
-              buttonContent='إنضم'
-            />
-          </div>
-          <div className='max-w-[360px] animation-translateY'>
-            <MainCard
-              img='/assets/images/courses4.webp'
-              title='مدخل إلي اللغه العربيه'
-              description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
-              buttonContent='إنضم'
-            />
-          </div>
-          <div className='max-w-[360px] animation-translateY'>
-            <MainCard
-              img='/assets/images/courses5.webp'
-              title='مدخل إلي اللغه العربيه'
-              description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
-              buttonContent='إنضم'
-            />
-          </div>
-          <div className='max-w-[360px] animation-translateY'>
-            <MainCard
-              img='/assets/images/courses6.webp'
-              title='مدخل إلي اللغه العربيه'
-              description='تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان لغير الناطقين عبر تطبيقات الهواتف الذكيه.'
-              buttonContent='إنضم'
-            />
-          </div>
-        </div>
+        </>
       ) : (
         <>
           {/* Swiper */}

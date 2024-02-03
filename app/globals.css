@@ -270,7 +270,14 @@ body,
     background: url('/assets/images/pattern-about-me.webp') center/cover
       repeat-x;
     background-color: var(--primary);
+    animation: movePatternX 55s linear infinite !important;
   }
+}
+
+.footer-section {
+  background: url('/assets/images/pattern-about-me.webp') center/cover repeat-x;
+  animation: none;
+  background-color: var(--primary);
 }
 
 .footer-section::before {
@@ -449,6 +456,7 @@ body,
 /* How To End */
 
 /* Start Edit Slider Last Tasks */
+
 .swiper-wrapper .swiper-slide .hero-section-custom.firstSlide {
   display: flex !important;
 }
@@ -460,5 +468,9 @@ body,
 .swiper-wrapper .swiper-slide .hero-section-custom.firstSlide > div p {
   width: 50% !important;
   text-align: center !important;
+}
+
+.custom-slide-swipe {
+  background-size: cover;
 }
 /* End Edit Slider Last Tasks */

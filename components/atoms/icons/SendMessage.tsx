@@ -6,7 +6,7 @@ const SendMessageIcon = (props: any) => (
     height={24}
     fill='none'
     {...props}
-    className='-rotate-90'
+    className='-rotate-90 hover:-rotate-[135deg] transition-all duration-300'
   >
     <path
       fill='#fff'
