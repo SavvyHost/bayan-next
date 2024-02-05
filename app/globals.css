@@ -162,7 +162,7 @@ body,
   }
 
   .navbar .nav-contain {
-    @apply w-full absolute z-50 h-[100vh] top-[110px] overflow-y-scroll left-[-100%] bg-white flex-col justify-start py-[10px] pl-[20px] transition-all duration-300 ease-linear rtl:left-[unset] rtl:right-[-100%] rtl:transition-all;
+    @apply w-full pt-6 absolute z-50 h-[100vh] top-[100px] overflow-y-scroll left-[-100%] bg-[#f9f7f7] flex-col justify-start py-[10px] pl-[20px] transition-all duration-300 ease-linear rtl:left-[unset] rtl:right-[-100%] rtl:transition-all;
   }
 
   .navbar .nav-contain.active-nav {
@@ -474,3 +474,59 @@ body,
   background-size: cover;
 }
 /* End Edit Slider Last Tasks */
+
+/* Fixed Icon */
+.fixed-icons {
+  position: fixed;
+  bottom: 45px;
+  left: 15px;
+  z-index: 99;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 25px;
+}
+
+.fixed-icons .fixed-icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: pulse-shadow 4s linear infinite alternate;
+}
+
+.fixed-icons .fixed-icon.primary-color {
+  background-color: #eea62e;
+}
+
+.fixed-icons .fixed-icon.secondary-color {
+  background-color: #2f4147;
+}
+
+.fixed-icons .fixed-icon img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.fixed-icons .fixed-icon:hover img {
+  animation: fadeInLeft 0.4s linear;
+}
+
+@keyframes pulse-shadow {
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 194, 88, 0.3),
+      0 0 0 20px rgba(255, 194, 88, 0.2);
+  }
+}

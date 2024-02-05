@@ -9,8 +9,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
 import CustomerCard from '@/components/molecules/CustomerCard/CustomerCard';
+import MainButton from '@/components/atoms/MainButton';
 
-const CustomerOpinions = () => {
+const CustomerOpinions = ({ pageDetails }: any) => {
   return (
     <div className='container my-[80px] customer-review-style'>
       <div className='flex flex-col items-center mb-[50px]'>
@@ -22,63 +23,83 @@ const CustomerOpinions = () => {
         </p>
       </div>
 
-      {/* Swiper */}
-      <Swiper
-        dir={'rtl'}
-        slidesPerView={1}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        style={{
-          //@ts-ignore
-          '--swiper-pagination-color': '#2260AA',
-          '--swiper-pagination-bullet-inactive-color': '#EEA62E',
-          '--swiper-pagination-bullet-inactive-opacity': '1',
-          '--swiper-pagination-bullet-width': '25px',
-          '--swiper-pagination-progressbar-size': '8px',
-        }}
-        pagination={{ clickable: true }}
-        modules={[Pagination, Autoplay]}
-        breakpoints={{
-          300: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
+      <div>
+        <div className='tablet:flex flex-col hidden items-center sm:!grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
+          <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
+            <CustomerCard />
+          </div>
+          <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
+            <CustomerCard />
+          </div>
+          <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
+            <CustomerCard />
+          </div>
+        </div>
 
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-      >
-        <SwiperSlide>
-          <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
-            <CustomerCard />
+        <div className='flex justify-center w-full'>
+          <div className='w-max h-[42px] mt-[30px]'>
+            <MainButton title='عرض المزيد' />
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
-            <CustomerCard />
-          </div>
-        </SwiperSlide>
+        </div>
+      </div>
+      <div className='tablet:hidden'>
+        <Swiper
+          dir={'rtl'}
+          slidesPerView={1}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          style={{
+            //@ts-ignore
+            '--swiper-pagination-color': '#2260AA',
+            '--swiper-pagination-bullet-inactive-color': '#EEA62E',
+            '--swiper-pagination-bullet-inactive-opacity': '1',
+            '--swiper-pagination-bullet-width': '25px',
+            '--swiper-pagination-progressbar-size': '8px',
+          }}
+          pagination={{ clickable: true }}
+          modules={[Pagination, Autoplay]}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
 
-        <SwiperSlide>
-          <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
-            <CustomerCard />
-          </div>
-        </SwiperSlide>
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
+          </SwiperSlide>
 
-        <SwiperSlide>
-          <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
-            <CustomerCard />
-          </div>
-        </SwiperSlide>
-      </Swiper>
+          <SwiperSlide>
+            <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='flex flex-col items-center xl:max-w-[340px] max-w-[440px] max-h-[285px] mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 };

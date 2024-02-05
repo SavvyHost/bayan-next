@@ -14,6 +14,8 @@ import Layers from '@/components/atoms/icons/Layers';
 import VectorStudent from '@/components/atoms/icons/VectorStudent';
 
 import { Autoplay } from 'swiper/modules';
+import TrainersComponents from '@/components/template/courses/TrainersComponents';
+import Link from 'next/link';
 
 const CoursesPageId = () => {
   return (
@@ -77,91 +79,7 @@ const CoursesPageId = () => {
           </div>
 
           {/* Swiper */}
-          <div className='mt-[60px] '>
-            <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-[24px]'>
-              المدربون
-            </h5>
-            <Swiper
-              dir={'rtl'}
-              slidesPerView={1}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              modules={[Autoplay]}
-              breakpoints={{
-                300: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                520: {
-                  slidesPerView: 2,
-                  spaceBetween: 40,
-                },
-                800: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-                  <TrainersCard
-                    image='/assets/images/Ellipse18.svg'
-                    title='أستاذه مريم محمد'
-                    description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-                  />
-                </div>
-              </SwiperSlide>
-
-              {/* Repeat this to experiment */}
-              <SwiperSlide>
-                <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-                  <TrainersCard
-                    image='/assets/images/Ellipse19.svg'
-                    title='أستاذه مريم محمد'
-                    description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-                  <TrainersCard
-                    image='/assets/images/Ellipse20.svg'
-                    title='أستاذه مريم محمد'
-                    description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-                  <TrainersCard
-                    image='/assets/images/Ellipse18.svg'
-                    title='أستاذه مريم محمد'
-                    description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-                  <TrainersCard
-                    image='/assets/images/Ellipse19.svg'
-                    title='أستاذه مريم محمد'
-                    description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-                  <TrainersCard
-                    image='/assets/images/Ellipse20.svg'
-                    title='أستاذه مريم محمد'
-                    description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-                  />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+          <TrainersComponents />
         </div>
 
         <div className='col-span-4'>
@@ -373,28 +291,34 @@ const CoursesPageId = () => {
 
               <ul className='flex gap-10 justify-center'>
                 <li>
-                  <Image
-                    src='/assets/images/whatsapp (1).png'
-                    width={42}
-                    height={42}
-                    alt='social'
-                  />
+                  <Link href='/'>
+                    <Image
+                      src='/assets/images/whatsapp (1).png'
+                      width={42}
+                      height={42}
+                      alt='social'
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Image
-                    src='/assets/images/Group 1000001805.svg'
-                    width={42}
-                    height={42}
-                    alt='social'
-                  />
+                  <Link href='/'>
+                    <Image
+                      src='/assets/images/Group 1000001805.svg'
+                      width={42}
+                      height={42}
+                      alt='social'
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Image
-                    src='/assets/images/telegram.png'
-                    width={42}
-                    height={42}
-                    alt='social'
-                  />
+                  <Link href='/'>
+                    <Image
+                      src='/assets/images/telegram.png'
+                      width={42}
+                      height={42}
+                      alt='social'
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -403,7 +327,7 @@ const CoursesPageId = () => {
       </div>
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
-      <CustomerOpinions />
+      <CustomerOpinions pageDetails={true} />
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
       <ImportantCourses />

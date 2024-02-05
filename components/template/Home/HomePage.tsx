@@ -15,8 +15,8 @@ const HomePage = () => {
       <Aboutus />
       <ImportantCourses />
       <ImportantTrainers />
-      <CustomerOpinions />
       <ImportantArticles />
+      <CustomerOpinions />
     </>
   );
 };
