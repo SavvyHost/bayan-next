@@ -530,3 +530,9 @@ body,
       0 0 0 20px rgba(255, 194, 88, 0.2);
   }
 }
+
+@media (max-width: 550px) {
+  .swiper-wrapper .swiper-slide .hero-section-custom.firstSlide > div p {
+    width: 100% !important;
+  }
+}

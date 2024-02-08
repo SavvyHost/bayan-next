@@ -23,26 +23,29 @@ const CustomerOpinions = ({ pageDetails }: any) => {
         </p>
       </div>
 
-      <div>
-        <div className='tablet:flex flex-col hidden items-center sm:!grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
-          <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
-            <CustomerCard />
+      {pageDetails && (
+        <div className='tablet:!block !hidden'>
+          <div className='tablet:flex flex-col hidden items-center sm:!grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
+            <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
+            <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
+            <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
+              <CustomerCard />
+            </div>
           </div>
-          <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
-            <CustomerCard />
-          </div>
-          <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
-            <CustomerCard />
-          </div>
-        </div>
 
-        <div className='flex justify-center w-full'>
-          <div className='w-max h-[42px] mt-[30px]'>
-            <MainButton title='عرض المزيد' />
+          <div className='flex justify-center w-full'>
+            <div className='w-max h-[42px] mt-[30px]'>
+              <MainButton title='عرض المزيد' />
+            </div>
           </div>
         </div>
-      </div>
-      <div className='tablet:hidden'>
+      )}
+
+      <div className={`${pageDetails && 'tablet:hidden'}`}>
         <Swiper
           dir={'rtl'}
           slidesPerView={1}

@@ -79,10 +79,10 @@ const CoursesPageId = () => {
           </div>
 
           {/* Swiper */}
-          <TrainersComponents />
+          <TrainersComponents pageDetails />
         </div>
 
-        <div className='col-span-4'>
+        <div className='col-span-4 !hidden'>
           {/* <div>
             <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-2'>
               الخطه الدراسية
@@ -330,7 +330,7 @@ const CoursesPageId = () => {
       <CustomerOpinions pageDetails={true} />
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
-      <ImportantCourses />
+      <ImportantCourses courses />
     </div>
   );
 };

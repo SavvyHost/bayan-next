@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Autoplay } from 'swiper/modules';
 import MainButton from '@/components/atoms/MainButton';
-const TrainersComponents = () => {
+const TrainersComponents = ({ pageDetails }: any) => {
   return (
     <>
       {/* Swiper */}
@@ -16,37 +16,40 @@ const TrainersComponents = () => {
           المدربون
         </h5>
 
-        <div>
-          <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
-            <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-              <TrainersCard
-                image='/assets/images/Ellipse18.svg'
-                title='أستاذه مريم محمد'
-                description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-              />
+        {pageDetails && (
+          <div className='tablet:!block !hidden'>
+            <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
+              <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
+                <TrainersCard
+                  image='/assets/images/Ellipse18.svg'
+                  title='أستاذه مريم محمد'
+                  description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
+                />
+              </div>
+              <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
+                <TrainersCard
+                  image='/assets/images/Ellipse18.svg'
+                  title='أستاذه مريم محمد'
+                  description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
+                />
+              </div>
+              <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
+                <TrainersCard
+                  image='/assets/images/Ellipse18.svg'
+                  title='أستاذه مريم محمد'
+                  description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
+                />
+              </div>
             </div>
-            <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-              <TrainersCard
-                image='/assets/images/Ellipse18.svg'
-                title='أستاذه مريم محمد'
-                description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-              />
-            </div>
-            <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
-              <TrainersCard
-                image='/assets/images/Ellipse18.svg'
-                title='أستاذه مريم محمد'
-                description='معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية.'
-              />
+            <div className='flex justify-center w-full'>
+              <div className='w-max h-[42px] mt-[30px]'>
+                <MainButton title='عرض المزيد' />
+              </div>
             </div>
           </div>
-          <div className='flex justify-center w-full'>
-            <div className='w-max h-[42px] mt-[30px]'>
-              <MainButton title='عرض المزيد' />
-            </div>
-          </div>
-        </div>
-        <div className='tablet:hidden'>
+        )}
+
+        <div className={`${pageDetails && 'tablet:hidden'}`}>
           <Swiper
             dir={'rtl'}
             slidesPerView={1}
