@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,9 +17,38 @@ import Image from 'next/image';
 import MainButton from '@/components/atoms/MainButton';
 
 const HeroSection = () => {
+  // وظيفة لضبط ارتفاع swiper-wrapper
+  const adjustSwiperWrapperHeight = (swiper) => {
+    // التحقق من وجود .firstSlide في الـ slide الحالي
+    const currentSlideHasFirstSlide =
+      swiper.slides[swiper.activeIndex].querySelector('.firstSlide');
+
+    // الحصول على swiper-wrapper
+    const swiperWrapper = swiper.el.querySelector('.swiper-wrapper');
+
+    // التحقق من عرض الشاشة
+    const isScreenWidthAbove768 = window.innerWidth <= 768;
+
+    if (swiperWrapper && isScreenWidthAbove768) {
+      if (currentSlideHasFirstSlide) {
+        // تحديد ارتفاع swiper-wrapper إلى 28rem إذا كان الـ slide الحالي يحتوي على .firstSlide
+        swiperWrapper.style.height = '28rem';
+      } else {
+        // يمكنك هنا تحديد ارتفاع مختلف إذا كان الـ slide الحالي لا يحتوي على .firstSlide
+        // أو إعادة ضبط الارتفاع إلى القيمة الافتراضية
+        swiperWrapper.style.height = 'auto'; // على سبيل المثال
+      }
+    } else if (swiperWrapper) {
+      // إعادة ضبط الارتفاع إلى القيمة الافتراضية للشاشات أصغر من 768 بكسل
+      swiperWrapper.style.height = 'auto';
+    }
+  };
+
   return (
     <div className='here-section'>
       <Swiper
+        onSlideChange={(swiper) => adjustSwiperWrapperHeight(swiper)}
+        onInit={(swiper) => adjustSwiperWrapperHeight(swiper)}
         dir={'rtl'}
         slidesPerView={1}
         loop
@@ -33,9 +62,11 @@ const HeroSection = () => {
         }}
         pagination={{ clickable: true }}
         modules={[Pagination]}
+        watchSlidesVisibility
+        watchSlidesProgress
       >
         <SwiperSlide
-          className={`!bg-[#2260AA] custom-slide-swipe bg-no-repeat bg-contain !object-contain bg-[url(/assets/images/heroslidernew.webp)]  `}
+          className={`!bg-[#2260AA] !max-h-[40rem] custom-slide-swipe bg-no-repeat bg-contain !object-contain md:bg-[url(/assets/images/heroslidernew.webp)] bg-[url(/assets/images/mobile-hero.svg)] `}
         >
           <div className='container firstSlide hero-section-custom flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7 '>
             {/* content */}

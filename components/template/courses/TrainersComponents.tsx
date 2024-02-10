@@ -12,7 +12,7 @@ const TrainersComponents = ({ pageDetails }: any) => {
     <>
       {/* Swiper */}
       <div className='mt-[60px] '>
-        <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-[24px]'>
+        <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-[24px] text-[#3855A5]'>
           المدربون
         </h5>
 

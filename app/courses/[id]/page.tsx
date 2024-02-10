@@ -16,13 +16,15 @@ import VectorStudent from '@/components/atoms/icons/VectorStudent';
 import { Autoplay } from 'swiper/modules';
 import TrainersComponents from '@/components/template/courses/TrainersComponents';
 import Link from 'next/link';
+import PricePlanCard from '@/components/molecules/price plan/PricePlanCard';
+import SubscriptionCard from '@/components/molecules/subscriptionCard/SubscriptionCard';
 
 const CoursesPageId = () => {
   return (
     <div className='container'>
       {/* grid grid-cols-12 */}
-      <div className='flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[100px] '>
-        <div className='col-span-8'>
+      <div className='flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[50px] lg:mb-[100px] '>
+        <div className='col-span-12 xl:max-w-[90%]'>
           <h4 className='hidden gap-2 mb-[14px] text-[14px] md:flex'>
             دورة تعلم اللغة العربية
             <span>
@@ -32,15 +34,16 @@ const CoursesPageId = () => {
           </h4>
 
           <div
-            className='py-[80px] px-[30px] max-h-[24px] rounded-[12px] w-full max-w-[900px] md:min-h-[450px] min-h-[220px] bg-cover bg-repeat-round highlights-style courses-details relative'
+            className='py-[80px] px-[30px] max-h-[24px] rounded-[12px] w-full  md:min-h-[450px] min-h-[220px] bg-cover bg-repeat-round highlights-style courses-details relative'
             style={{
-              backgroundImage: "url('/assets/images/article-details.webp')",
+              backgroundImage:
+                "url('/assets/images/Quran Poster Instagram Post 2(1).webp')",
             }}
           />
 
           {/* description courses */}
           <div className='mt-[35px]'>
-            <h5 className='text-[20px] font-[TajawalMedium,sans-serif]'>
+            <h5 className='text-[20px] font-[TajawalMedium,sans-serif] text-[#3855A5]'>
               دورة تعلم اللغه العربية
             </h5>
 
@@ -60,7 +63,7 @@ const CoursesPageId = () => {
 
           {/* What will you learn? */}
           <div className='mt-[60px] '>
-            <h5 className='text-[20px] font-[TajawalMedium,sans-serif]'>
+            <h5 className='text-[20px] font-[TajawalMedium,sans-serif] text-[#3855A5]'>
               ماذا ستتعلم؟
             </h5>
 
@@ -78,8 +81,17 @@ const CoursesPageId = () => {
             </p>
           </div>
 
-          {/* Swiper */}
-          <TrainersComponents pageDetails />
+          <div className='flex flex-col gap-10 lg:grid lg:grid-cols-4 lg:gap-4'>
+            <div className='col-span-3'>
+              {/* Swiper */}
+              <TrainersComponents pageDetails />
+            </div>
+            <div className='flex mb-10 !w-full'>
+              <div className='w-full flex items-end mb-10 max-w-[400px]'>
+                <SubscriptionCard />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className='col-span-4 !hidden'>
@@ -324,6 +336,12 @@ const CoursesPageId = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className='flex flex-col sm:!grid  sm:!grid-cols-2 lg:!grid-cols-3 gap-8 xl:gap-16  xl:max-w-[90%]'>
+        <PricePlanCard />
+        <PricePlanCard />
+        <PricePlanCard />
       </div>
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
