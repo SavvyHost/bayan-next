@@ -24,7 +24,7 @@ const CoursesPageId = () => {
     <div className='container'>
       {/* grid grid-cols-12 */}
       <div className='flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[50px] lg:mb-[100px] '>
-        <div className='col-span-12 xl:max-w-[90%]'>
+        <div className='xl:col-span-9 col-span-12'>
           <h4 className='hidden gap-2 mb-[14px] text-[14px] md:flex'>
             دورة تعلم اللغة العربية
             <span>
@@ -80,21 +80,9 @@ const CoursesPageId = () => {
               بايج مايكر"
             </p>
           </div>
-
-          <div className='flex flex-col gap-10 lg:grid lg:grid-cols-4 lg:gap-4'>
-            <div className='col-span-3'>
-              {/* Swiper */}
-              <TrainersComponents pageDetails />
-            </div>
-            <div className='flex mb-10 !w-full'>
-              <div className='w-full flex items-end mb-10 max-w-[400px]'>
-                <SubscriptionCard />
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className='col-span-4 !hidden'>
+        <div className='col-span-3 hidden xl:!flex'>
           {/* <div>
             <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-2'>
               الخطه الدراسية
@@ -225,7 +213,7 @@ const CoursesPageId = () => {
             </div>
           </div> */}
 
-          <div className='sm:flex sm:gap-2 flex-col lg:gap-0'>
+          <div className='sm:flex sm:gap-2 flex-col lg:gap-0 !sticky top-0'>
             {/*  */}
             {/* <div className='border-soild sm:w-full border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]'>
               <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
@@ -251,52 +239,9 @@ const CoursesPageId = () => {
                 </li>
               </ul>
             </div> */}
-            <div className='border-soild sm:w-full border-[1px] py-4 border-textGray custom-box-shadow-3 rounded-[8px] my-[12px] xl:my-[24px]'>
-              <p className='font-[TajawalBold,sans-serif] text-[#EEA62E] text-[24px] text-center'>
-                800.00 LE
-              </p>
-            </div>
-
-            <div className='border-soild sm:w-full border-[1px] py-4 border-textGray custom-box-shadow-3 rounded-[8px] my-[12px] xl:my-[24px]'>
-              <ul>
-                <li className='flex justify-center items-center gap-4 px-6'>
-                  <span className='text-[#EEA62E] text-[20px]'>12</span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
-                    إثني عشر محاضره شهريا
-                  </p>
-                </li>
-                <hr className='my-[8px]' />
-                <li className='flex justify-center items-center gap-4 px-6'>
-                  <span className='text-[#EEA62E] text-[20px]'>
-                    <ClockFi />
-                  </span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
-                    إثني عشر محاضره شهريا
-                  </p>
-                </li>
-                <hr className='my-[8px]' />
-                <li className='flex justify-center items-center gap-4 px-6'>
-                  <span className='text-[#EEA62E] text-[20px]'>
-                    <Layers />
-                  </span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
-                    إثني عشر محاضره شهريا
-                  </p>
-                </li>
-                <hr className='my-[8px]' />
-                <li className='flex justify-center items-center gap-4 px-6'>
-                  <span className='text-[#EEA62E] text-[20px]'>
-                    <VectorStudent />
-                  </span>
-                  <p className='text-[#4f4f4f] text-[16px] md:text-[18px] 2xl:!text-[20px]'>
-                    إثني عشر محاضره شهريا
-                  </p>
-                </li>
-              </ul>
-            </div>
 
             {/* اشترك معنا الان */}
-            <div className='border-soild sm:w-full sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]'>
+            <div className='border-soild sm:w-full  sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]'>
               <h6 className='text-[20px] mb-[20px] text-secondary font-[TajawalMedium,sans-serif] text-center'>
                 إشترك معنا الأن
               </h6>
@@ -344,11 +289,23 @@ const CoursesPageId = () => {
         <PricePlanCard />
       </div>
 
+      <div className='flex flex-col gap-10 lg:grid lg:grid-cols-4 lg:gap-4'>
+        <div className='col-span-3'>
+          {/* Swiper */}
+          <TrainersComponents pageDetails />
+        </div>
+        <div className='flex justify-center mb-10 !w-full xl:hidden'>
+          <div className='w-full flex justify-center items-end mb-10 max-w-[400px]'>
+            <SubscriptionCard />
+          </div>
+        </div>
+      </div>
+
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
       <CustomerOpinions pageDetails={true} />
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
-      <ImportantCourses courses />
+      {/* <ImportantCourses courses /> */}
     </div>
   );
 };
