@@ -18,28 +18,19 @@ import MainButton from "@/components/atoms/MainButton";
 
 const HeroSection = () => {
   // وظيفة لضبط ارتفاع swiper-wrapper
-  const adjustSwiperWrapperHeight = (swiper) => {
-    // التحقق من وجود .firstSlide في الـ slide الحالي
+  const adjustSwiperWrapperHeight = (swiper:any) => {
     const currentSlideHasFirstSlide =
       swiper.slides[swiper.activeIndex].querySelector('.firstSlide');
-
-    // الحصول على swiper-wrapper
     const swiperWrapper = swiper.el.querySelector('.swiper-wrapper');
-
-    // التحقق من عرض الشاشة
     const isScreenWidthAbove768 = window.innerWidth <= 768;
 
     if (swiperWrapper && isScreenWidthAbove768) {
       if (currentSlideHasFirstSlide) {
-        // تحديد ارتفاع swiper-wrapper إلى 28rem إذا كان الـ slide الحالي يحتوي على .firstSlide
         swiperWrapper.style.height = '28rem';
       } else {
-        // يمكنك هنا تحديد ارتفاع مختلف إذا كان الـ slide الحالي لا يحتوي على .firstSlide
-        // أو إعادة ضبط الارتفاع إلى القيمة الافتراضية
-        swiperWrapper.style.height = 'auto'; // على سبيل المثال
+        swiperWrapper.style.height = 'auto';
       }
     } else if (swiperWrapper) {
-      // إعادة ضبط الارتفاع إلى القيمة الافتراضية للشاشات أصغر من 768 بكسل
       swiperWrapper.style.height = 'auto';
     }
   };
