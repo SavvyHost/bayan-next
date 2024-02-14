@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import MainButton from '@/components/atoms/MainButton';
 import SecondaryCard from '@/components/molecules/SecondaryCard/SecondaryCard';
 import Link from 'next/link';
 import React from 'react';
@@ -111,7 +112,7 @@ const ArticlesImportant = () => {
             </p>
           </div>
 
-          <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-16 justify-items-center mt-[40px]'>
+          <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
             <div className='max-w-[340px] md:animation-translateY'>
               <SecondaryCard
                 img='/assets/images/courses3.webp'
@@ -167,6 +168,11 @@ const ArticlesImportant = () => {
                 description='معنا.. تخطَّ حواجز اللغة.منصة علمني العربية منصة تعليمية تهدف إقرأ المزيد'
                 articlesPath='/articles'
               />
+            </div>
+          </div>
+          <div className='flex justify-center w-full'>
+            <div className='w-max h-[42px] mt-[30px]'>
+              <MainButton title='عرض المزيد' />
             </div>
           </div>
         </div>

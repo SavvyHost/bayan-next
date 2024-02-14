@@ -16,7 +16,7 @@ const JoinUs = () => {
           </span>
           <input
             type='text'
-            className='bg-[#15233D] rounded-[4px] h-[40px] w-full ps-[13px] pt-[4px]'
+            className='bg-[#15233D] rounded-[4px] h-[40px] w-full ps-[13px] pt-[4px] pe-16 text-white'
             placeholder='البريد الالكتروني'
           />
         </div>
