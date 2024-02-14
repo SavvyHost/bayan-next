@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,8 +11,6 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-import classes from "./HomeSection.module.css";
-import Image from "next/image";
 import MainButton from "@/components/atoms/MainButton";
 
 const HeroSection = () => {
@@ -88,13 +85,7 @@ const HeroSection = () => {
                 <MainButton title="تعلم أكثر" />
               </div>
             </div>
-            {/* <div className='lg:me-9 flex !justify-center xl:!justify-end md:!order-2'>
-              <img
-                className='!max-w-[300px] h-[300px] !max-h-[300px] md:!max-w-[450px] md:!max-h-[450px] w-full'
-                src='/assets/images/Group 11.svg'
-                alt='hero image'
-              />
-            </div> */}
+
           </div>
         </SwiperSlide>
       </Swiper>
