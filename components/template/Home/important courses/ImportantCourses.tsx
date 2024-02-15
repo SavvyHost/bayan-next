@@ -17,10 +17,12 @@ const ImportantCourses = ({ courses }: any) => {
   return (
     <div className='container my-[65px] '>
       <div className='flex flex-col items-center'>
-        <h3 className='text-[29px] lg:text-[34px] text-primary font-[TajawalBold,sans-serif]'>
+        <h3 className='text-[30px] lg:text-[35px] text-primary font-[TajawalBold,sans-serif] pb-2 relative'>
           أهم الدورات
+          <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>
-        <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%]'>
+
+        <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] pt-4'>
           تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان عن
           طريق الهواتف الذكيه
         </p>

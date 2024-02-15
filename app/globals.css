@@ -86,7 +86,7 @@ body,
   :root {
     --background: #f9f7f7;
     --primary: #2260aa;
-    --secondary: #eea62e;
+    --secondary: #d3971b;
     --main: #4f4f4f;
     --border: #4f4f4f;
     --input: #6d51391c;
@@ -205,7 +205,7 @@ body,
   position: relative;
   display: flex;
   align-items: center;
-  background: url('/assets/images/pattern-about-me.webp') center/cover repeat-x;
+  /* background: url('/assets/images/pattern-about-me.webp') center/cover repeat-x; */
   background-color: #2260aa;
   z-index: 9;
   overflow: hidden;
@@ -514,8 +514,8 @@ body,
 }
 
 .fixed-icons .fixed-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   position: relative;
   z-index: 9;
   display: flex;
@@ -525,6 +525,10 @@ body,
   overflow: hidden;
   border-radius: 50%;
   animation: pulse-shadow 4s linear infinite alternate;
+}
+
+.fixed-icons .fixed-icon svg {
+  transform: scale(1.4);
 }
 
 .fixed-icons .fixed-icon.primary-color {
@@ -538,6 +542,7 @@ body,
 .fixed-icons .fixed-icon img {
   width: 24px;
   height: 24px;
+
   -o-object-fit: contain;
   object-fit: contain;
 }

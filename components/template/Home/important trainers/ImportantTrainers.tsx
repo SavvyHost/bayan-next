@@ -5,7 +5,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 const ImportantTrainers = () => {
   return (
-    <div className='container my-[144px] '>
+    <div className='container my-[100px] '>
       <div className='flex flex-col items-center mb-[4.5rem]'>
         <h3 className='text-[29px] lg:text-[34px] text-primary font-[TajawalBold,sans-serif]'>
           أهم المدربون

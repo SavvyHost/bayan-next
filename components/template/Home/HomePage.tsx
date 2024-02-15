@@ -12,8 +12,8 @@ const HomePage = () => {
     <>
       <HeroSection />
       <StepsToJoin />
-      <Aboutus />
       <ImportantCourses />
+      <Aboutus />
       <ImportantTrainers />
       <CustomerOpinions />
       <ImportantArticles />

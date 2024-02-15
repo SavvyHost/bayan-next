@@ -12,7 +12,7 @@ const TrainersComponents = ({ pageDetails }: any) => {
     <>
       {/* Swiper */}
       <div className='mt-[60px] '>
-        <h5 className='text-[20px] font-[TajawalMedium,sans-serif] mb-[24px] text-[#3855A5]'>
+        <h5 className='text-[20px] font-[TajawalMedium,sans-serif] text-[#3855A5] mb-[24px]'>
           المدربون
         </h5>
 
@@ -131,6 +131,9 @@ const TrainersComponents = ({ pageDetails }: any) => {
             </SwiperSlide>
           </Swiper>
         </div>
+        <p className='text-main text-[20px] text-center  my-[24px] font-bold font-[TajawalMedium,sans-serif]'>
+          ومجموعة كبيرة من معلمين ومعلمات الأزهر الشريف
+        </p>
       </div>
     </>
   );

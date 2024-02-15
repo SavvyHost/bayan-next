@@ -23,7 +23,7 @@ const StepsToJoin = () => {
                 إضغط للتسجيل
               </li>
               <li className='text-[#4F4F4F] text-[18px] md:text-[20px]'>
-                إبدأ رحلتك
+                إبدأ رحلتك مع القرأن الكريم
               </li>
             </ul>
           </div>

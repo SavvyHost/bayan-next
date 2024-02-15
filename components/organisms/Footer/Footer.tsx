@@ -48,19 +48,19 @@ const Footer = () => {
               الصفحات
             </h6>
             <ul className='flex flex-col gap-4'>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-orange-400 flex items-center justify-start gap-[12px]'>
+              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/'>الرئيسية</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-orange-400 flex items-center justify-start gap-[12px]'>
+              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/courses'>الدورات</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-orange-400 flex items-center justify-start gap-[12px]'>
+              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/albums'>الألبوم</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-orange-400 flex items-center justify-start gap-[12px]'>
+              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/about-us'>ماذا عنا</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-orange-400 flex items-center justify-start gap-[12px]'>
+              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/contact-us'>تواصل معنا</Link>
               </li>
             </ul>
