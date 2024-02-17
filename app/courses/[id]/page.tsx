@@ -1,28 +1,19 @@
 'use client';
 /* eslint-disable react/no-unescaped-entities */
 import ArrowLeft from '@/components/atoms/icons/ArrowLeft';
-import TrainersCard from '@/components/molecules/TrainersCard/TrainersCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import CustomerOpinions from '@/components/template/Home/customer opinions/CustomerOpinions';
+import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import ArrorLeftBlue from '@/components/atoms/icons/ArrorLeftBlue';
-import CustomerOpinions from '@/components/template/Home/customer opinions/CustomerOpinions';
-import ImportantCourses from '@/components/template/Home/important courses/ImportantCourses';
-import Image from 'next/image';
-import ClockFi from '@/components/atoms/icons/ClockFi';
-import Layers from '@/components/atoms/icons/Layers';
-import VectorStudent from '@/components/atoms/icons/VectorStudent';
 
-import { Autoplay } from 'swiper/modules';
-import TrainersComponents from '@/components/template/courses/TrainersComponents';
-import Link from 'next/link';
 import PricePlanCard from '@/components/molecules/price plan/PricePlanCard';
 import SubscriptionCard from '@/components/molecules/subscriptionCard/SubscriptionCard';
+import TrainersComponents from '@/components/template/courses/TrainersComponents';
+import Link from 'next/link';
 
 const CoursesPageId = () => {
   return (
     <div className='container'>
-      {/* grid grid-cols-12 */}
       <div className='flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[50px] lg:mb-[100px] '>
         <div className='xl:col-span-9 col-span-12'>
           <h4 className='hidden gap-2 mb-[14px] text-[14px] md:flex'>

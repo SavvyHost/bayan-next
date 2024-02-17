@@ -22,10 +22,10 @@ const ImportantCourses = ({ courses }: any) => {
           <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>
 
-        <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] pt-4'>
+        {/* <p className='text-قران main text-[15px] lg:text-[17px] text-center md:w-[40%] pt-4'>
           تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان عن
           طريق الهواتف الذكيه
-        </p>
+        </p> */}
       </div>
 
       {!courses ? (
