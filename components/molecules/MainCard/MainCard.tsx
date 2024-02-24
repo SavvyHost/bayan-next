@@ -8,6 +8,7 @@ interface MainCardProps {
   title?: string;
   description?: string;
   buttonContent?: string;
+  id: string;
 }
 
 const MainCard: React.FC<MainCardProps> = ({
@@ -15,9 +16,10 @@ const MainCard: React.FC<MainCardProps> = ({
   title,
   description,
   buttonContent,
+  id,
 }) => {
   return (
-    <Link href={"/courses/1"}>
+    <Link href={`/courses/${id}`}>
       <div className="bg-white custom-box-shadow rounded-b-lg pt-[11px] pb-[5px] md:pb-[10px]">
         <div className="flex justify-center ">
           <Image
@@ -34,7 +36,7 @@ const MainCard: React.FC<MainCardProps> = ({
             {title}
           </h4>
           <p className="mt-[15px] text-main font-[TajawalMedium,sans-serif]">
-            {description}
+            {description?.slice(0, 200)}
           </p>
 
           <div className="w-[96px] h-[42px] mt-[30px]">

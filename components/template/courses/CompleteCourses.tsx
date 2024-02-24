@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import ImportantCourses from '../Home/important courses/ImportantCourses';
 import MainButton from '@/components/atoms/MainButton';
+import ImportantCourses from '../Home/important courses/ImportantCourses';
 
-const CompleteCourses = () => {
+const CompleteCourses = ({data}:any) => {
   return (
     <div className='container py-[40px] md:my-[50px] '>
       <div className='flex flex-col items-center'>
@@ -15,7 +14,6 @@ const CompleteCourses = () => {
         </p>
       </div>
 
-      {/* Start Complete Coureses */}
 
       {/*  */}
       <div className='flex flex-col lg:grid lg:grid-cols-12 mt-[45px] md:mt-[70px] bg-background rounded-[12px] custom-box-shadow-2'>
@@ -46,7 +44,7 @@ const CompleteCourses = () => {
       </div>
 
       {/* Start Important Courses */}
-      <ImportantCourses courses />
+      <ImportantCourses courses={data?.data} swiper={true}  />
     </div>
   );
 };

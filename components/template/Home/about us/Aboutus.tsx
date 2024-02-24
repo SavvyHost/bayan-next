@@ -6,7 +6,7 @@ import AboutusIcon5 from '@/components/atoms/icons/AboutusIcon5';
 import AboutusIcon6 from '@/components/atoms/icons/AboutusIcon6';
 import React from 'react';
 
-const Aboutus = () => {
+const AboutUs = () => {
   return (
     <div className='my-[35px] about-me-section'>
       <div className='container my-16'>
@@ -86,4 +86,4 @@ const Aboutus = () => {
   );
 };
 
-export default Aboutus;
+export default AboutUs;

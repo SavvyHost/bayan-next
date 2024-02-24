@@ -1,8 +1,8 @@
 import StarRate from '@/components/atoms/icons/StarRate';
 import React, { useState } from 'react';
 
-const RateComponent = () => {
-  const [selectedId, setSelectedId] = useState(3);
+const RateComponent = ({rate}:any) => {
+  const [selectedId, setSelectedId] = useState(rate);
 
   return (
     <>
