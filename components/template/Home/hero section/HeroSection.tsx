@@ -1,12 +1,12 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
+import MainButton from "@/components/atoms/MainButton";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import MainButton from "@/components/atoms/MainButton";
-import classes from "./HomeSection.module.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const HeroSection = ({ slides }: any) => {
+  console.log("🚀 ~ HeroSection ~ slides:", slides)
   const adjustSwiperWrapperHeight = (swiper: any) => {
     const currentSlideHasFirstSlide =
       swiper.slides[swiper.activeIndex].querySelector(".firstSlide");
@@ -69,7 +69,7 @@ const HeroSection = ({ slides }: any) => {
                 </p>
 
                 <div className="mt-[30px] w-[150px] h-[45px]">
-                  <MainButton title= {item?.button_text_ar}/>
+                  <MainButton title= {item?.button_text_ar} link={item?.button_link}/>
                 </div>
               </div>
             </div>

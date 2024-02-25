@@ -17,6 +17,7 @@ const ImportantArticles = ({ posts }: any) => {
         {posts.map((item: any) => (
           <div className="max-w-[340px] md:animation-translateY" key={item?.id}>
             <SecondaryCard
+              id={item?.id}
               img={item?.image}
               title={item?.title_ar}
               date="27 يناير 2024"

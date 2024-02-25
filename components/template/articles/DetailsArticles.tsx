@@ -1,23 +1,31 @@
+"use client";
 import RateAction from "@/components/molecules/RateAction/RateAction";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-async function getData(id: any) {
-  const res = await fetch(`https://bayan.savvyhost.io/api/posts/${id}`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
+const DetailsArticles = ({ textSize, params }: any) => {
+  const [articleData, setArticleData] = useState<any>({});
+  useEffect(() => {
+    // Function to fetch article data
+    const fetchArticleData = async () => {
+      try {
+        const response = await fetch(
+          `https://bayan.savvyhost.io/api/posts/${params?.id}`
+        );
+        const data = await response.json();
+        setArticleData(data?.data);
+      } catch (error) {
+        console.error("Failed to fetch article data:", error);
+      }
+    };
 
-const DetailsArticles =  ({ textSize, params }: any) => {
-//   const data = await getData(params?.id);
-//   console.log("🚀 ~ DetailsArticles ~ data:", data);
+    fetchArticleData();
+  }, [params?.id]);
 
   return (
     <div className="order-1 xs:order-2">
       <h4 className="text-primary text-[36px] font-[TajawalMedium,sans-serif]">
-        عنوان المقالة
+        {articleData?.title_ar}
       </h4>
       <div className="flex flex-col lg:grid lg:grid-cols-11 gap-x-[50px] gap-y-[40px]">
         <div className="col-span-7 lg:col-span-6">
@@ -25,23 +33,13 @@ const DetailsArticles =  ({ textSize, params }: any) => {
             className="text-[#616161] font-[TajawalMedium,sans-serif] mt-2"
             style={{ fontSize: `${textSize}px` }}
           >
-            معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
-            لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف
-            الذكية.لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-            العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه …
-            بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت … وعند
-            موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم
-            ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص
-            التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او
-            الانتقادات للتصميم الاساسي. وخلافاَ للاعتقاد السائد فإن لوريم إيبسوم
-            ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ
-            العام 45 قبل الميلاد. من كتاب “حول أقاصي الخير والشر”
+            {articleData?.description_ar}
           </p>
         </div>
 
         <div className="w-auto md:w-[400px] h-[300px] max-w-[385px] max-h-[300px] col-span-4 lg:col-span-5 ">
           <Image
-            src="/assets/images/articlesdetails.webp"
+            src={articleData?.image}
             width={400}
             height={300}
             alt="articles details"
@@ -53,17 +51,7 @@ const DetailsArticles =  ({ textSize, params }: any) => {
             className="text-[#616161] font-[TajawalMedium,sans-serif] mt-2"
             style={{ fontSize: `${textSize}px` }}
           >
-            معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
-            لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف
-            الذكية.لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-            العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه …
-            بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت … وعند
-            موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم
-            ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص
-            التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او
-            الانتقادات للتصميم الاساسي. وخلافاَ للاعتقاد السائد فإن لوريم إيبسوم
-            ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ
-            العام 45 قبل الميلاد. من كتاب “حول أقاصي الخير والشر”
+            {articleData?.content_ar}
           </p>
         </div>
       </div>

@@ -69,12 +69,13 @@ const ArticlesImportant = ({ data }: any) => {
           </div>
 
           <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  xl:flex xl:flex-row xl:gap-16 xl:justify-center  gap-16 justify-items-center mt-[40px]">
-            {data?.map((item: any) => (
+            {data?.slice(0,3)?.map((item: any) => (
               <div
-                className="max-w-[340px] md:animation-translateY"
+                className="max-w-[350px] md:animation-translateY"
                 key={item?.id}
               >
                 <SecondaryCard
+                  id={item?.id}
                   img={item?.image}
                   title={item?.title_ar}
                   date="27 يناير 2024"
@@ -106,6 +107,7 @@ const ArticlesImportant = ({ data }: any) => {
                 key={item?.id}
               >
                 <SecondaryCard
+                  id={item?.id}
                   img={item?.image}
                   title={item?.title_ar}
                   date="27 يناير 2024"

@@ -2,7 +2,7 @@ import Album from '@/components/template/album/Album';
 import Highlights from '@/components/template/album/Highlights';
 import React from 'react';
 async function getData() {
-  const res = await fetch("https://bayan.savvyhost.io/api/achievements");
+  const res = await fetch("https://bayan.savvyhost.io/api/photos");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -14,7 +14,7 @@ const AlbumsPage =async() => {
   return (
     <>
       <Highlights  data={data?.data}/>
-      <Album />
+      <Album data={data?.data}/>
     </>
   );
 }

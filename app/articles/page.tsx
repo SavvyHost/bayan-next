@@ -1,5 +1,5 @@
-import ArticlesImportant from '@/components/template/articles/ArticlesImportant';
-import React from 'react';
+import ArticlesImportant from "@/components/template/articles/ArticlesImportant";
+import React from "react";
 
 async function getData() {
   const res = await fetch("https://bayan.savvyhost.io/api/posts");
@@ -8,10 +8,9 @@ async function getData() {
   }
   return res.json();
 }
-const  ArticlesPage = async()=> {
+const ArticlesPage = async () => {
   const data = await getData();
-
-  return <ArticlesImportant data={data?.data}/>;
-}
+  return <ArticlesImportant data={data?.data} />;
+};
 
 export default ArticlesPage;

@@ -11,6 +11,7 @@ interface SecondaryCardProps {
   date?: string;
   articlesPath?: string;
   important?: boolean;
+  id?:string
 }
 
 const SecondaryCard: React.FC<SecondaryCardProps> = ({
@@ -20,9 +21,10 @@ const SecondaryCard: React.FC<SecondaryCardProps> = ({
   date,
   articlesPath,
   important,
+  id
 }) => {
   return (
-    <Link href={"/articles/1"}>
+    <Link href={`/articles/${id}`}>
       <div className="relative animation-translateY ">
         {important && (
           <div className="absolute left-[-10px] top-[-10px] z-50">
