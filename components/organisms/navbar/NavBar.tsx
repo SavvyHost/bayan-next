@@ -27,8 +27,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='h-[64px] py-[12px] flex items-center bg-[#2260aa]'>
-        <div className='flex gap-4 px-4 w-full justify-end'>
+      <div className=' lg:!hidden h-[64px] py-[12px] flex items-center bg-[#2260aa]'>
+        <div className='flex gap-4 px-4 w-full justify-end '>
           <button type='button' className='text-white'>
             English
           </button>
@@ -42,15 +42,16 @@ const Navbar = () => {
       <div className='navbar  border-b-[1px] border-solid border-[rgba(19, 18, 18, 0.10)] bg-background '>
         <div className='container px-4  mx-auto'>
           <div className='py-[6px]  flex justify-between items-center '>
-            <div>
+            <Link href='/'>
               <Image
                 src='/assets/images/logosite.webp'
                 width={86}
                 height={94}
                 alt='logo'
+                style={{ transform: 'scale(1.2)' }}
                 className='object-contain !max-h-[70px] md:!max-h-[94px]'
               />
-            </div>
+            </Link>
 
             <div
               className={`nav-contain w-full flex-basis-auto tablet:!pb-24  flex justify-between items-center content-center tablet:px-6 ${
