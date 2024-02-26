@@ -23,9 +23,7 @@ const TrainersCard: React.FC<TrainersCardProps> = ({
         className='rounded-full h-[136px] w-[136px] max-h-[136px] min-h-[136px] max-w-[136px] min-w-[136px]'
       />
 
-      <h5 className='text-main font-[TajawalMedium,sans-serif] text-[18px] font-bold mt-[10px]'>
-        {title}
-      </h5>
+      <h5 className='text-main   text-[18px] font-bold mt-[10px]'>{title}</h5>
 
       <p className='text-textGray mt-[10px] text-center '>{description}</p>
     </>

@@ -2,20 +2,18 @@
 import MainButton from '@/components/atoms/MainButton';
 import React from 'react';
 
-const AboutUs = ({data}:any) => {
+const AboutUs = ({ data }: any) => {
   return (
     <div className='container my-16 flex mb-20 flex-col lg:flex-row'>
       <div className='w-full lg:max-w-[35%] order-2 lg:order-1'>
-        <h3 className='font-[TajawalBold,sans-serif] lg:text-[45px] text-[30px] text-primary'>
+        <h3 className=' font-bold lg:text-[45px] text-[30px] text-primary'>
           من نحن؟
         </h3>
-        <h3 className='font-[TajawalMedium,sans-serif] lg:text-[28px] text-[22px] text-secondary'>
-         {data?.about_title_ar}
+        <h3 className='  lg:text-[28px] text-[22px] text-secondary'>
+          {data?.about_title_ar}
         </h3>
 
-        <p className=' text-textGray text-[18px] mt-4'>
-        {data?.about_text_ar}
-        </p>
+        <p className=' text-textGray text-[18px] mt-4'>{data?.about_text_ar}</p>
 
         <div className='w-[106px] h-[42px] mt-10'>
           <MainButton title='إنضم' />

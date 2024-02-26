@@ -26,7 +26,7 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ removeOverFlow }) => {
               : 'text-textGray'
           }`}
         >
-          <Link href={item.path} className='!font-[TajawalMedium,sans-serif]'>
+          <Link href={item.path} className='! '>
             {item.item}
           </Link>
         </li>

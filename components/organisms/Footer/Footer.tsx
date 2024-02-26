@@ -24,19 +24,19 @@ const Footer = () => {
           </div>
 
           <div className=' col-span-2 xs:col-span-5 sm:!col-span-3  lg:!col-span-2 '>
-            <h6 className='text-secondary text-[24px] font-[TajawalMedium,sans-serif] font-bold mb-6'>
+            <h6 className='text-secondary text-[24px]   font-bold mb-6'>
               تواصل معنا
             </h6>
             <ul className='flex flex-col gap-4'>
-              <li className='font-[TajawalMedium,sans-serif] text-white flex items-center justify-start gap-[12px]'>
+              <li className='  text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
                 0102347890
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white flex items-center justify-start gap-[12px]'>
+              <li className='  text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
                 البريد الإلكتروني
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white flex items-center justify-start gap-[12px]'>
+              <li className='  text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
                 الموقع
               </li>
@@ -44,40 +44,40 @@ const Footer = () => {
           </div>
 
           <div className='col-span-2 xs:col-span-5 sm:!col-span-3  lg:!col-span-2 '>
-            <h6 className='text-secondary text-[24px] font-[TajawalMedium,sans-serif] font-bold mb-6'>
+            <h6 className='text-secondary text-[24px]   font-bold mb-6'>
               الصفحات
             </h6>
             <ul className='flex flex-col gap-4'>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
+              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/'>الرئيسية</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
+              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/courses'>الدورات</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
+              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/albums'>الألبوم</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
+              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/about-us'>ماذا عنا</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
+              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
                 <Link href='/contact-us'>تواصل معنا</Link>
               </li>
             </ul>
           </div>
 
           <div className='col-span-2 xs:col-span-5 sm:!col-span-3  lg:!col-span-2 '>
-            <h6 className='text-secondary text-[24px] font-[TajawalMedium,sans-serif] font-bold mb-6'>
+            <h6 className='text-secondary text-[24px]   font-bold mb-6'>
               الروابط الهامه
             </h6>
             <ul className='flex flex-col gap-4'>
-              <li className='font-[TajawalMedium,sans-serif] text-white flex items-center justify-start gap-[12px]'>
+              <li className='  text-white flex items-center justify-start gap-[12px]'>
                 <Link href='/'>الرابط الاول</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white flex items-center justify-start gap-[12px]'>
+              <li className='  text-white flex items-center justify-start gap-[12px]'>
                 <Link href='/'>الرابط الثاني</Link>
               </li>
-              <li className='font-[TajawalMedium,sans-serif] text-white flex items-center justify-start gap-[12px]'>
+              <li className='  text-white flex items-center justify-start gap-[12px]'>
                 <Link href='/'>الرابط الثالث</Link>
               </li>
             </ul>
@@ -88,7 +88,7 @@ const Footer = () => {
 
         <hr className='border-[#f9f7f796] ' />
         <div className='container flex justify-center items-center py-3'>
-          <h6 className='font-[TajawalMedium,sans-serif] text-white'>
+          <h6 className='  text-white'>
             جميع الحقوق محفوظة لموقعنا &copy; 2024
           </h6>
         </div>

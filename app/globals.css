@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 /* Start Project initialization */
 
 * {
@@ -73,7 +75,7 @@ ul {
 
 body,
 * {
-  font-family: 'TajawalRegular', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 /* @font-face {
@@ -392,13 +394,13 @@ body,
 
 /* How To Start */
 .how-to-start ul {
-  list-style: none;
+  list-style: decimal;
   margin: 0;
   padding: 0;
   position: relative;
 }
 
-.how-to-start ul::after {
+/* .how-to-start ul::after {
   content: '';
   display: inline-block;
   width: 2px;
@@ -452,7 +454,7 @@ body,
     background: #417ec0;
     border: 5px solid #417ec0;
   }
-}
+} */
 /* How To End */
 
 /* Start Edit Slider Last Tasks */
@@ -532,11 +534,11 @@ body,
 }
 
 .fixed-icons .fixed-icon.primary-color {
-  background-color: #eea62e;
+  background-color: #25d366;
 }
 
 .fixed-icons .fixed-icon.secondary-color {
-  background-color: #2f4147;
+  background-color: #25d366;
 }
 
 .fixed-icons .fixed-icon img {
@@ -553,8 +555,8 @@ body,
 
 @keyframes pulse-shadow {
   100% {
-    box-shadow: 0 0 0 10px rgba(255, 194, 88, 0.3),
-      0 0 0 20px rgba(255, 194, 88, 0.2);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0.3),
+      0 0 0 20px rgba(37, 211, 102, 0.2);
   }
 }
 

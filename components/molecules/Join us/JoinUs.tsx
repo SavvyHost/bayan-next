@@ -5,9 +5,7 @@ import React from 'react';
 const JoinUs = () => {
   return (
     <div className='bg-[#192e5198] rounded-[8px] py-[33px] px-[22px] w-[450px] lg:w-[unset] h-max'>
-      <h5 className='text-white text-[24px] font-[TajawalMedium,sans-serif] mb-[13px]'>
-        إنضم الان
-      </h5>
+      <h5 className='text-white text-[24px]   mb-[13px]'>إنضم الان</h5>
 
       <div className='flex gap-[1rem]'>
         <div className='w-full relative'>
