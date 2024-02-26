@@ -28,7 +28,7 @@ const ImportantCourses = ({ courses, swiper }: any) => {
           <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
             {courses?.map((item: any) => (
               <div
-                className='max-w-[360px] md:animation-translateY'
+                className='max-w-[360px] md:animation-translateY h-full'
                 key={item?.id}
               >
                 <MainCard

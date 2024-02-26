@@ -19,8 +19,8 @@ const MainCard: React.FC<MainCardProps> = ({
   id,
 }) => {
   return (
-    <Link href={`/courses/${id}`}>
-      <div className='bg-white custom-box-shadow rounded-b-lg pt-[11px] pb-[5px] md:pb-[10px]'>
+    <Link href={`/courses/${id}`} className='h-full'>
+      <div className='bg-white custom-box-shadow rounded-b-lg pt-[11px] pb-[5px] md:pb-[10px] h-full'>
         <div className='flex justify-center '>
           <Image
             className='max-h-[240px] min-h-[240px]'
@@ -33,7 +33,13 @@ const MainCard: React.FC<MainCardProps> = ({
 
         <div className='ms-[20px] md:me-[40px] me-[20px] mb-[35px] mt-[25px]'>
           <h4 className='  font-bold text-main text-[19px]'>{title}</h4>
-          <p className='mt-[15px] text-main  '>{description?.slice(0, 200)}</p>
+          <p className='mt-[15px] text-main  h-[120px]'>
+            {description
+              ? description.length > 190
+                ? description.slice(0, 190) + '...'
+                : description
+              : '-'}
+          </p>
 
           <div className='w-[96px] h-[42px] mt-[30px]'>
             <MainButton title={buttonContent} />
