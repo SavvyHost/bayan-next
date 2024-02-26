@@ -58,7 +58,7 @@ const ArticlesImportant = ({ data }: any) => {
 
         <div>
           <div className='flex flex-col items-center mt-[100px]'>
-            <h3 className='text-[29px] lg:text-[34px] text-primary pb-2  font-bold relative w-max pb-2  mb-3'>
+            <h3 className='text-[29px] lg:text-[34px] text-primary pb-2 font-bold relative w-max mb-3'>
               أهم المقالات
               <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
             </h3>
@@ -92,7 +92,7 @@ const ArticlesImportant = ({ data }: any) => {
 
         <div>
           <div className='flex flex-col items-center mt-[100px]'>
-            <h3 className='text-[29px] lg:text-[34px] text-primary pb-2  font-bold relative w-max pb-2  mb-3'>
+            <h3 className='text-[29px] lg:text-[34px] text-primary font-bold relative w-max pb-2 mb-3'>
               أحدث المقالات
               <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
             </h3>
