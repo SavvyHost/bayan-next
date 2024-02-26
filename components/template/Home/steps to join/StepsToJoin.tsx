@@ -22,7 +22,7 @@ const StepsToJoin = ({ data }: any) => {
                   className='text-[#4F4F4F] text-[18px] md:text-[20px]'
                   key={index}
                 >
-                  {item}
+                  {index + 1}. {item}
                 </li>
               ))}
             </ul>

@@ -54,7 +54,7 @@ const HeroSection = ({ slides }: any) => {
           >
             <div className='container hero-section-custom flex flex-col md:grid md:grid-cols-2 min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[80px] gap-7'>
               {/* content */}
-              <div className='flex flex-col gap-1 '>
+              <div className='flex flex-col items-center md:items-start gap-1 '>
                 <h2 className='text-[#2260AA] font-[TajawalBold,sans-serif] text-[27px] md:text-[40px] lg:!text-[50px]'>
                   {item?.title_ar}
                 </h2>

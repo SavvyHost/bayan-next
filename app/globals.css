@@ -164,7 +164,7 @@ body,
   }
 
   .navbar .nav-contain {
-    @apply w-full pt-6 absolute z-50 h-[100vh] top-[100px] overflow-y-scroll left-[-100%] bg-[#f9f7f7] flex-col justify-start py-[10px] pl-[20px] transition-all duration-300 ease-linear rtl:left-[unset] rtl:right-[-100%] rtl:transition-all;
+    @apply w-full pt-6 absolute z-50 h-[100vh] top-[150px] overflow-y-scroll left-[-100%] bg-[#f9f7f7] flex-col justify-start py-[10px] pl-[20px] transition-all duration-300 ease-linear rtl:left-[unset] rtl:right-[-100%] rtl:transition-all;
   }
 
   .navbar .nav-contain.active-nav {
@@ -394,7 +394,7 @@ body,
 
 /* How To Start */
 .how-to-start ul {
-  list-style: decimal;
+  list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
