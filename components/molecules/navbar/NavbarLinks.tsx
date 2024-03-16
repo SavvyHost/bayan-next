@@ -1,16 +1,19 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NavItems } from '../../../src/utils/navbar.data';
+import { useTranslations } from 'next-intl';
 
 interface NavbarLinksProps {
   removeOverFlow: () => void;
 }
 
 const NavbarLinks: React.FC<NavbarLinksProps> = ({ removeOverFlow }) => {
-  const pathname = usePathname();
+  const t = useTranslations();
 
+  const pathname = usePathname();
   const activeLink = pathname;
 
   return (
@@ -27,7 +30,7 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ removeOverFlow }) => {
           }`}
         >
           <Link href={item.path} className='! '>
-            {item.item}
+            {t(item.item)}
           </Link>
         </li>
       ))}

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import '../src/styles/animation.css';
+import '../../src/styles/animation.css';
 import Navbar from '@/components/organisms/navbar/NavBar';
 import Footer from '@/components/organisms/Footer/Footer';
+import LayoutPages from '@/components/molecules/Layout/LayoutPages';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,15 +17,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  const messages = useMessages();
+
   return (
-    <html lang='ar' dir='rtl'>
+    <html lang={locale} dir='rtl'>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <LayoutPages>{children}</LayoutPages>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

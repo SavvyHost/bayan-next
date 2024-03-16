@@ -4,9 +4,12 @@ import AboutusIcon3 from '@/components/atoms/icons/AboutusIcon3';
 import AboutusIcon4 from '@/components/atoms/icons/AboutusIcon4';
 import AboutusIcon5 from '@/components/atoms/icons/AboutusIcon5';
 import AboutusIcon6 from '@/components/atoms/icons/AboutusIcon6';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 const AboutUs = () => {
+  const t = useTranslations('Index');
+
   return (
     <div className='my-[35px] about-me-section'>
       <div className='container my-16'>

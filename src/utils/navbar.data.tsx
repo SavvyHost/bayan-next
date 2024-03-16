@@ -1,26 +1,26 @@
 export const NavItems = [
   {
-    item: 'الرئيسيه',
+    item: 'Home',
     path: '/',
   },
   {
-    item: 'الدورات',
+    item: 'Courses',
     path: '/courses',
   },
   {
-    item: 'الألبوم',
+    item: 'Album',
     path: '/albums',
   },
   {
-    item: 'المقالات',
+    item: 'Articles',
     path: '/articles',
   },
   {
-    item: 'تواصل معنا',
+    item: 'Contact Us',
     path: '/contact-us',
   },
   {
-    item: 'من نحن',
+    item: 'About Us',
     path: '/about-us',
   },
 ];

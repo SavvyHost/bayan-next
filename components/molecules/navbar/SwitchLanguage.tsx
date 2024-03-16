@@ -1,18 +1,38 @@
-import React, { useState } from 'react';
+'use client';
+
+import { useLocale } from 'next-intl';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
+import { ChangeEvent, useTransition } from 'react';
 
 const SwitchLanguage = () => {
-  const [languageActive, setLanguageActive] = useState('ar');
+  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+  const localActive = useLocale();
+  const pathname = usePathname();
 
-  const handleLanguageChange = (language: string) => {
-    setLanguageActive(language);
+  const switchLocale = (nextLocale: any) => {
+    startTransition(() => {
+      const currentPath = pathname;
+      const newPath = currentPath.replace(`/${localActive}`, `/${nextLocale}`);
+      // Get current query parameters
+      const searchParams = new URLSearchParams(window.location.search);
+
+      // Rebuild pathname with query parameters
+      const newPathWithQuery = `${newPath}${
+        searchParams.toString() ? `?${searchParams.toString()}` : ''
+      }`;
+
+      router.push(newPathWithQuery);
+    });
   };
 
   return (
     <div className='flex  rounded-[50px]'>
       <button
-        onClick={() => handleLanguageChange('ar')}
+        onClick={() => switchLocale(localActive === 'en' ? 'ar' : 'en')}
         className={`py-[12px] px-[20px]  font-bold  rounded-s-[50px] border-solid border-[1px] border-secondary ${
-          languageActive === 'ar'
+          localActive === 'ar'
             ? 'bg-secondary text-background'
             : 'bg-transparent text-secondary'
         }`}
@@ -20,9 +40,9 @@ const SwitchLanguage = () => {
         العربية
       </button>
       <button
-        onClick={() => handleLanguageChange('en')}
+        onClick={() => switchLocale(localActive === 'en' ? 'ar' : 'en')}
         className={`py-[12px] px-[20px]   font-bold border-solid border-[1px] border-secondary rounded-e-[50px] ${
-          languageActive === 'en'
+          localActive === 'en'
             ? 'bg-secondary text-background'
             : 'bg-transparent text-secondary'
         }`}

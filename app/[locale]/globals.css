@@ -54,22 +54,22 @@ ul {
 /* Don't forget to add fonts ⭐ */
 @font-face {
   font-family: 'TajawalRegular';
-  src: url('../src/assets/fonts/Tajawal-Regular.ttf');
+  src: url('../../src/assets/fonts/Tajawal-Regular.ttf');
   font-display: swap;
 }
 @font-face {
   font-family: 'TajawalMedium';
-  src: url('../src/assets/fonts/Tajawal-Medium.ttf');
+  src: url('../../src/assets/fonts/Tajawal-Medium.ttf');
   font-display: swap;
 }
 @font-face {
   font-family: 'TajawalBold';
-  src: url('../src/assets/fonts/Tajawal-Bold.ttf');
+  src: url('../../src/assets/fonts/Tajawal-Bold.ttf');
   font-display: swap;
 }
 @font-face {
   font-family: 'TajawalLight';
-  src: url('../src/assets/fonts/Tajawal-Light.ttf');
+  src: url('../../src/assets/fonts/Tajawal-Light.ttf');
   font-display: swap;
 }
 
