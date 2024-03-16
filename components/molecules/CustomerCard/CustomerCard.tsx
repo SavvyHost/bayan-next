@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import RateComponent from '../Rate/Rate';
+import { useLocale } from 'next-intl';
 
 const CustomerCard = ({ item }: any) => {
+  const localeActive = useLocale();
+  const isRTL = localeActive == "ar";
   return (
     <div className='h-full bg-background custom-box-shadow-2 py-[30px] px-[15px]  xl:w-[340px] w-full  rounded-[12px]'>
       <div className='flex gap-5'>
@@ -14,8 +17,8 @@ const CustomerCard = ({ item }: any) => {
         />
 
         <div className='w-full'>
-          <h5 className='text-[#1E1E1E]   font-bold'>{item?.name_ar}</h5>
-          <span className='text-textGray'> {item?.job_ar}</span>
+          <h5 className='text-[#1E1E1E]   font-bold'>{isRTL ? item?.name_ar : item?.name_en}</h5>
+          <span className='text-textGray'> {isRTL ? item?.job_ar :  item?.job_en}</span>
           <div className='flex justify-end'>
             <RateComponent rate={item?.rate} />
           </div>

@@ -1,24 +1,22 @@
-'use client';
-
 import { useLocale } from 'next-intl';
-import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
-import { ChangeEvent, useTransition } from 'react';
+import { useTransition, useEffect } from 'react';
 
 const SwitchLanguage = () => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
-  const localActive = useLocale();
+  const localeActive = useLocale();
   const pathname = usePathname();
 
-  const switchLocale = (nextLocale: any) => {
+  useEffect(() => {
+    document.documentElement.dir = localeActive === 'en' ? 'ltr' : 'rtl';
+  }, [localeActive]);
+
+  const switchLocale = (nextLocale: string) => {
     startTransition(() => {
       const currentPath = pathname;
-      const newPath = currentPath.replace(`/${localActive}`, `/${nextLocale}`);
-      // Get current query parameters
+      const newPath = currentPath.replace(`/${localeActive}`, `/${nextLocale}`);
       const searchParams = new URLSearchParams(window.location.search);
-
-      // Rebuild pathname with query parameters
       const newPathWithQuery = `${newPath}${
         searchParams.toString() ? `?${searchParams.toString()}` : ''
       }`;
@@ -28,11 +26,11 @@ const SwitchLanguage = () => {
   };
 
   return (
-    <div className='flex  rounded-[50px]'>
+    <div className='flex rounded-[50px]'>
       <button
-        onClick={() => switchLocale(localActive === 'en' ? 'ar' : 'en')}
-        className={`py-[12px] px-[20px]  font-bold  rounded-s-[50px] border-solid border-[1px] border-secondary ${
-          localActive === 'ar'
+        onClick={() => switchLocale(localeActive === 'en' ? 'ar' : 'en')}
+        className={`py-[12px] px-[20px] font-bold rounded-s-[50px] border-solid border-[1px] border-secondary ${
+          localeActive === 'ar'
             ? 'bg-secondary text-background'
             : 'bg-transparent text-secondary'
         }`}
@@ -40,9 +38,9 @@ const SwitchLanguage = () => {
         العربية
       </button>
       <button
-        onClick={() => switchLocale(localActive === 'en' ? 'ar' : 'en')}
-        className={`py-[12px] px-[20px]   font-bold border-solid border-[1px] border-secondary rounded-e-[50px] ${
-          localActive === 'en'
+        onClick={() => switchLocale(localeActive === 'en' ? 'ar' : 'en')}
+        className={`py-[12px] px-[20px] font-bold border-solid border-[1px] border-secondary rounded-e-[50px] ${
+          localeActive === 'en'
             ? 'bg-secondary text-background'
             : 'bg-transparent text-secondary'
         }`}

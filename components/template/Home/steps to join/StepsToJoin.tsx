@@ -1,14 +1,19 @@
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 
 const StepsToJoin = ({ data }: any) => {
-  console.log('🚀 ~ StepsToJoin ~ data:', data);
+  const localeActive = useLocale();
+  const isRTL = localeActive == "ar";
+  const t = useTranslations();
+
   return (
+
     <div className='container py-8'>
       <div className='md:grid flex flex-col grid-cols-3'>
         <div className='md:w-[70%] flex flex-col gap-3 col-span-2'>
           <h6 className='text-[#EFBB43]   text-[22px] md:text-[26px]'>
-            خطوات بسيطه للإنضمام
+            {t("Simple steps to join")}
           </h6>
           <p className='text-[#4F4F4F] text-[14px] md:text-[15px]'>
             معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف

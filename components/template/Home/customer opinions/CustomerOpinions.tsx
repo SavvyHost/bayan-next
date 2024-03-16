@@ -1,17 +1,22 @@
 'use client';
 import MainButton from '@/components/atoms/MainButton';
 import CustomerCard from '@/components/molecules/CustomerCard/CustomerCard';
+import { useLocale, useTranslations } from 'next-intl';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const CustomerOpinions = ({ pageDetails, reviews }: any) => {
+  const localeActive = useLocale();
+  const isRTL = localeActive == "ar";
+  const t = useTranslations();
+
   return (
     <div className='container my-[80px] customer-review-style'>
       <div className='flex flex-col items-center mb-[50px]'>
         <h3 className='text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2  mb-3'>
-          أراء العملاء
+         {t("Customer opinions")}
           <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>
 
@@ -44,7 +49,7 @@ const CustomerOpinions = ({ pageDetails, reviews }: any) => {
 
       <div className={`${pageDetails && 'tablet:hidden'}`}>
         <Swiper
-          dir={'rtl'}
+            dir={isRTL ? "rtl" : "ltr"}
           slidesPerView={1}
           autoplay={{
             delay: 2500,

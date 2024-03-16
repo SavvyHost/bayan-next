@@ -1,30 +1,30 @@
-import React from 'react';
-import HeroSection from './hero section/HeroSection';
-import ImportantCourses from './important courses/ImportantCourses';
-import ImportantArticles from './important articles/ImportantArticles';
-import ImportantTrainers from './important trainers/ImportantTrainers';
-import CustomerOpinions from './customer opinions/CustomerOpinions';
-import StepsToJoin from './steps to join/StepsToJoin';
-import AboutUs from '../about-us/AboutUs';
+import { useLocale } from 'next-intl';
 import Aboutus from './about us/Aboutus';
+import CustomerOpinions from './customer opinions/CustomerOpinions';
+import HeroSection from './hero section/HeroSection';
+import ImportantArticles from './important articles/ImportantArticles';
+import ImportantCourses from './important courses/ImportantCourses';
+import ImportantTrainers from './important trainers/ImportantTrainers';
+import StepsToJoin from './steps to join/StepsToJoin';
 
-async function getData() {
-  const res = await fetch('https://bayan.savvyhost.io/api/home');
+async function getData(locale: any) {
+  const res = await fetch(`https://bayan.savvyhost.io/api/home?lang=${locale}`);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
   return res.json();
 }
-async function getSettingData() {
-  const res = await fetch('https://bayan.savvyhost.io/api/settings');
+async function getSettingData(locale:any) {
+  const res = await fetch(`https://bayan.savvyhost.io/api/settings?lang=${locale}`);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
   return res.json();
 }
 const HomePage = async () => {
-  const data = await getData();
-  const settingData = await getSettingData();
+  const localeActive = useLocale();
+  const data = await getData(localeActive);
+  const settingData = await getSettingData(localeActive);
 
   return (
     <>

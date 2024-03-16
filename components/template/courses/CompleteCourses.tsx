@@ -1,13 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import MainButton from '@/components/atoms/MainButton';
 import ImportantCourses from '../Home/important courses/ImportantCourses';
+import { useTranslations } from 'next-intl';
 
 const CompleteCourses = ({ data }: any) => {
+  const t = useTranslations();
+
   return (
     <div className='container py-[40px] md:my-[50px] '>
       <div className='flex flex-col items-center'>
         <h3 className='text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2  mb-3'>
-          أكمل دوراتك
+        {t("Complete your courses")}
           <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>
         <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold'>

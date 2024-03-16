@@ -3,6 +3,7 @@ import ArrowLeft from '@/components/atoms/icons/ArrowLeft';
 import PricePlanCard from '@/components/molecules/price plan/PricePlanCard';
 import SubscriptionCard from '@/components/molecules/subscriptionCard/SubscriptionCard';
 import TrainersComponents from '@/components/template/courses/TrainersComponents';
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import 'swiper/css';
@@ -18,12 +19,14 @@ async function getData(id: any) {
 
 const CoursesPageId = async ({ params }: { params: { id: string } }) => {
   const data = await getData(params?.id);
+  const localeActive = useLocale();
+  const isRTL = localeActive == "ar";
   return (
     <div className='container'>
       <div className='flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[50px] lg:mb-[100px] '>
         <div className='xl:col-span-9 col-span-12'>
           <h4 className='hidden gap-2 mb-[14px] text-[14px] md:flex'>
-            {data?.data?.title_ar}
+            {isRTL ? data?.data?.title_ar :  data?.data?.title_en}
             <span>
               <ArrowLeft />
             </span>
@@ -40,11 +43,11 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
           {/* description courses */}
           <div className='mt-[35px]'>
             <h5 className='text-[20px]   text-[#3855A5]'>
-              {data?.data?.title_ar}
+              {isRTL ? data?.data?.title_ar : data?.data?.title_en}
             </h5>
 
             <p className='text-main text-[15px] mt-[24px]'>
-              {data?.data?.description_ar}
+              {isRTL ? data?.data?.description_ar :data?.data?.description_en }
             </p>
           </div>
 
@@ -53,7 +56,7 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
             <h5 className='text-[20px]   text-[#3855A5]'>ماذا ستتعلم؟</h5>
 
             <p className='text-main text-[15px] mt-[24px]'>
-              {data?.data?.learning_objectives_ar}
+              {isRTL ? data?.data?.learning_objectives_ar :data?.data?.learning_objectives_en }
             </p>
           </div>
         </div>
@@ -104,9 +107,11 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className='flex flex-col sm:!grid  sm:!grid-cols-2 lg:!grid-cols-3 gap-8 xl:gap-16  xl:max-w-[90%]'>
-        <PricePlanCard />
-        <PricePlanCard />
-        <PricePlanCard />
+      {
+            data?.data?.plans.map((item:any , index:string)=>
+            <PricePlanCard  item={item} key={index} />
+            )
+          }
       </div>
 
       <div className='flex flex-col gap-10 lg:grid lg:grid-cols-4 lg:gap-4'>

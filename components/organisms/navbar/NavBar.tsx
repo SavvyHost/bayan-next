@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { useState } from 'react';
 import Hamburger from '../../molecules/navbar/Hamburger';
@@ -10,8 +9,6 @@ import FaceBookSub from '@/components/atoms/icons/facebookSub';
 import TawtterSub from '@/components/atoms/icons/TawtterSub';
 import InstaSub from '@/components/atoms/icons/InstaSub';
 import YouTubeSub from '@/components/atoms/icons/youtubeSub';
-
-// import { selectCurrentToken } from '@/auth/auth.slice';
 
 const Navbar = () => {
   const [mobiledrawer, setMoblieDrawer] = useState(false);

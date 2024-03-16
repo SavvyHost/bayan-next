@@ -1,11 +1,9 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import '../../src/styles/animation.css';
-import Navbar from '@/components/organisms/navbar/NavBar';
-import Footer from '@/components/organisms/Footer/Footer';
 import LayoutPages from '@/components/molecules/Layout/LayoutPages';
+import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { Inter } from 'next/font/google';
+import '../../src/styles/animation.css';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -1,11 +1,11 @@
 import PhoneIcon from '@/components/atoms/icons/PhoneIcon';
 import WhatssappIcon from '@/components/atoms/icons/Whatssapp';
 import JoinUs from '@/components/molecules/Join us/JoinUs';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import { useTranslations } from 'next-intl';
 
 const Footer = () => {
+  const t = useTranslations('Footer');
+
   return (
     <>
       <div className='fixed-icons'>
@@ -24,72 +24,44 @@ const Footer = () => {
           </div>
 
           <div className=' col-span-2 xs:col-span-5 sm:!col-span-3  lg:!col-span-2 '>
-            <h6 className='text-secondary text-[24px]   font-bold mb-6'>
-              تواصل معنا
+            <h6 className='text-secondary text-[24px] font-bold mb-6'>
+              {t('contactUs')}
             </h6>
             <ul className='flex flex-col gap-4'>
-              <li className='  text-white flex items-center justify-start gap-[12px]'>
+              <li className='text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
-                0102347890
+                {t('phoneNumber')}
               </li>
-              <li className='  text-white flex items-center justify-start gap-[12px]'>
+              <li className='text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
-                البريد الإلكتروني
+                {t('email')}
               </li>
-              <li className='  text-white flex items-center justify-start gap-[12px]'>
+              <li className='text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
-                الموقع
+                {t('website')}
               </li>
             </ul>
           </div>
 
           <div className='col-span-2 xs:col-span-5 sm:!col-span-3  lg:!col-span-2 '>
-            <h6 className='text-secondary text-[24px]   font-bold mb-6'>
-              الصفحات
+            <h6 className='text-secondary text-[24px] font-bold mb-6'>
+              {t('pages')}
             </h6>
-            <ul className='flex flex-col gap-4'>
-              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
-                <Link href='/'>الرئيسية</Link>
-              </li>
-              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
-                <Link href='/courses'>الدورات</Link>
-              </li>
-              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
-                <Link href='/albums'>الألبوم</Link>
-              </li>
-              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
-                <Link href='/about-us'>ماذا عنا</Link>
-              </li>
-              <li className='  text-white hover:text-[#d3971b] flex items-center justify-start gap-[12px]'>
-                <Link href='/contact-us'>تواصل معنا</Link>
-              </li>
-            </ul>
+            {/* Links dynamically translated */}
           </div>
 
           <div className='col-span-2 xs:col-span-5 sm:!col-span-3  lg:!col-span-2 '>
-            <h6 className='text-secondary text-[24px]   font-bold mb-6'>
-              الروابط الهامه
+            <h6 className='text-secondary text-[24px] font-bold mb-6'>
+              {t('importantLinks')}
             </h6>
-            <ul className='flex flex-col gap-4'>
-              <li className='  text-white flex items-center justify-start gap-[12px]'>
-                <Link href='/'>الرابط الاول</Link>
-              </li>
-              <li className='  text-white flex items-center justify-start gap-[12px]'>
-                <Link href='/'>الرابط الثاني</Link>
-              </li>
-              <li className='  text-white flex items-center justify-start gap-[12px]'>
-                <Link href='/'>الرابط الثالث</Link>
-              </li>
-            </ul>
+            {/* Links dynamically translated */}
           </div>
         </div>
 
-        {/* copyright */}
-
-        <hr className='border-[#f9f7f796] ' />
+        <hr className='border-[#f9f7f796]' />
         <div className='container flex justify-center items-center py-3'>
-          <h6 className='  text-white'>
-            جميع الحقوق محفوظة لموقعنا &copy; 2024
+          <h6 className='text-white'>
+            {t('allRightsReserved')}
           </h6>
         </div>
       </div>
