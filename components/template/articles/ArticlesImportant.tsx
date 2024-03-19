@@ -73,7 +73,9 @@ const ArticlesImportant = ({ data }: any) => {
                   title={isRTL ? item?.title_ar : item?.title_en}
                   date={t("articleDate")} // Assuming this is dynamic; otherwise, use a translation
                   description={
-                    isRTL ? item?.description_ar : item?.description_en
+                    isRTL
+                      ? item?.description_ar.slice(0, 60)
+                      : item?.description_en.slice(0, 60)
                   }
                   articlesPath="/articles"
                   important

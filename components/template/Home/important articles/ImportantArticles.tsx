@@ -10,7 +10,7 @@ const ImportantArticles = ({ posts }: any) => {
     <div className="container my-[100px] ">
       <div className="flex flex-col items-center">
         <h3 className="text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2  mb-3">
-         {t("Most important articles")}
+          {t("Most important articles")}
           <span className="block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]"></span>
         </h3>
         <p className="text-main text-[15px] lg:text-[17px] font-semibold text-center md:w-[40%]">
@@ -27,7 +27,11 @@ const ImportantArticles = ({ posts }: any) => {
               img={item?.image}
               title={isRTL ? item?.title_ar : item?.title_en}
               date="27 يناير 2024"
-              description={isRTL ? item?.description_ar : item?.description_en}
+              description={
+                isRTL
+                  ? item?.description_ar?.slice(0, 30)
+                  : item?.description_en.slice(0, 30)
+              }
               articlesPath="/articles"
               important
             />

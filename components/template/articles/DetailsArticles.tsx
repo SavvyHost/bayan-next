@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 
 const DetailsArticles = ({ textSize, params }: any) => {
   const [articleData, setArticleData] = useState<any>({});
+  console.log("🚀 ~ DetailsArticles ~ articleData:", articleData)
   useEffect(() => {
     // Function to fetch article data
     const fetchArticleData = async () => {
@@ -46,10 +47,11 @@ const DetailsArticles = ({ textSize, params }: any) => {
 
         <div className='col-span-11'>
           <p
+              dangerouslySetInnerHTML={{ __html: articleData?.content_ar }}
             className='text-[#616161]   mt-2'
             style={{ fontSize: `${textSize}px` }}
           >
-            {articleData?.content_ar}
+            {/* {articleData?.content_ar} */}
           </p>
         </div>
       </div>
