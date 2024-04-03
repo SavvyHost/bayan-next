@@ -1,11 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import MainButton from '@/components/atoms/MainButton';
 import ImportantCourses from '../Home/important courses/ImportantCourses';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const CompleteCourses = ({ data }: any) => {
   const t = useTranslations();
-
+  const localeActive = useLocale();
+  const isRTL = localeActive == "ar";
+console.log("vvvvvvvvvvvvvvvvvv",data?.data)
   return (
     <div className='container py-[40px] md:my-[50px] '>
       <div className='flex flex-col items-center'>
@@ -22,15 +24,12 @@ const CompleteCourses = ({ data }: any) => {
       <div className='flex flex-col lg:grid lg:grid-cols-12 mt-[45px] md:mt-[70px] bg-background rounded-[12px] custom-box-shadow-2'>
         <div className='col-span-7 flex flex-col gap-6 px-[15px] py-[25px] md:p-[45px] order-2 lg:!order-1'>
           <h3 className='text-[28px] xs:text-[36px] text-primary  '>
-            عنوان الدورة
+           {isRTL ? data?.data[0]?.title_ar :data?.data[0]?.title_en }
           </h3>
 
           <p className='  text-[#616161] xl:pe-[100px]'>
-            معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
-            لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف
-            الذكية.لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-            العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه …
-            بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت …
+          {isRTL ? data?.data[0]?.description_ar :data?.data[0]?.description_en }
+
           </p>
 
           <div className='w-[86px] h-[38px]'>
@@ -47,7 +46,7 @@ const CompleteCourses = ({ data }: any) => {
       </div>
 
       {/* Start Important Courses */}
-      <ImportantCourses courses={data?.data} swiper={true} />
+      <ImportantCourses courses={data?.data} swiper={false} hiddenShowMore={true} />
     </div>
   );
 };

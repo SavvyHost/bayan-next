@@ -16,7 +16,7 @@ const PricePlanCard = ({ item }: any) => {
 
         <div className="border-soild sm:w-full  border-[1px] py-4 border-textGray custom-box-shadow-3 rounded-t-none rounded-[8px] my-[12px] ">
           <ul>
-            {item?.map((subItem: any, index: any) => (
+            {item?.slice(1).map((subItem: any, index: any) => (
               <li
                 className="flex justify-center items-center gap-4 px-6"
                 key={index}

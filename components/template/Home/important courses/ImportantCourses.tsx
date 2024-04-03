@@ -8,7 +8,7 @@ import { Autoplay } from "swiper/modules";
 import MainButton from "@/components/atoms/MainButton";
 import { useLocale, useTranslations } from "next-intl";
 
-const ImportantCourses = ({ courses, swiper }: any) => {
+const ImportantCourses = ({ courses, swiper ,hiddenShowMore }: any) => {
   const localeActive = useLocale();
   const isRTL = localeActive == "ar";
   const t = useTranslations();
@@ -42,11 +42,14 @@ const ImportantCourses = ({ courses, swiper }: any) => {
               </div>
             ))}
           </div>
+          {
+            hiddenShowMore ? "" : 
           <div className="flex justify-center w-full">
             <div className="w-max h-[42px] mt-[30px]">
               <MainButton title="عرض المزيد" />
             </div>
           </div>
+          }
         </>
       ) : (
         <>
