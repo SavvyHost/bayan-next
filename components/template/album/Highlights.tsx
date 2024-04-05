@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 const Highlights = ({ data }: any) => {
+  console.log("🚀 ~ Highlights ~ data:", data)
   const t = useTranslations();
 
   return (
