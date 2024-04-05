@@ -41,7 +41,7 @@ const CustomerOpinions = ({ pageDetails, reviews }: any) => {
 
           <div className='flex justify-center w-full'>
             <div className='w-max h-[42px] mt-[30px]'>
-              <MainButton title='عرض المزيد' />
+              <MainButton title='عرض المزيد'  link='/courses'/>
             </div>
           </div>
         </div>

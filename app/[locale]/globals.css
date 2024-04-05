@@ -430,6 +430,10 @@ body,
   border-radius: 10px;
   animation: dotAnimation 5s infinite;
 }
+/* [dir='ltr'] .how-to-start ul li::after{
+  right: inherit;
+
+} */
 
 .how-to-start ul li:nth-child(1)::after {
   animation-delay: 0s;

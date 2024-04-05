@@ -32,7 +32,7 @@ const ImportantArticles = ({ posts }: any) => {
                   ? item?.description_ar?.slice(0, 30)
                   : item?.description_en.slice(0, 30)
               }
-              articlesPath="/articles"
+              articlesPath={`/articles/${item?.id}`}
               important
             />
           </div>
