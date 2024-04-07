@@ -6,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 
 const ArticlesImportant = ({ data }: any) => {
+  console.log("🚀 ~ ArticlesImportant ~ data:", data);
   const localeActive = useLocale();
   const isRTL = localeActive === "ar";
   const t = useTranslations();
@@ -26,11 +27,11 @@ const ArticlesImportant = ({ data }: any) => {
         <div className="flex flex-col lg:grid lg:grid-cols-12 mt-[45px] md:mt-[70px] bg-background rounded-[12px] custom-box-shadow-2">
           <div className="col-span-7 flex flex-col gap-3 px-[15px] py-[25px] md:p-[45px] order-2 lg:!order-1">
             <h3 className="text-[28px] xs:text-[36px] text-primary">
-              {t("articleTitle")}
+              {isRTL ? data[0]?.title_ar : data[0]?.title_en}
             </h3>
             <span className="text-secondary">{t("articleDate")}</span>
             <p className="text-[#616161] xl:pe-[100px]">
-              {t("articleDescription")}
+              {isRTL ? data[0]?.description_ar : data[0]?.description_en}
             </p>
             <div>
               <Link
@@ -61,8 +62,8 @@ const ArticlesImportant = ({ data }: any) => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row xl:gap-16 xl:justify-center gap-16 justify-items-center mt-[40px]">
-            {data?.slice(0, 3)?.map((item: any) => (
+          <div className="flex flex-col flex-wrap items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row xl:gap-16 xl:justify-center gap-16 justify-items-center mt-[40px]">
+            {data?.map((item: any) => (
               <div
                 className="max-w-[350px] md:animation-translateY"
                 key={item?.id}
@@ -84,10 +85,10 @@ const ArticlesImportant = ({ data }: any) => {
             ))}
           </div>
         </div>
-
+        {/* 
         <div className="flex justify-center w-full mt-[30px]">
-          <MainButton title={t("viewMore")} />
-        </div>
+          <MainButton title={t("viewMore")}  link="/articles"/>
+        </div> */}
       </div>
     </>
   );
