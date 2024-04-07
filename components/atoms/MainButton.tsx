@@ -5,7 +5,6 @@ interface mainButtonProps {
   title?: string;
   link?: string;
 }
-
 const MainButton: React.FC<mainButtonProps> = ({ title, link }) => {
   const otherLInk = "https://app.bayan-academy.com/parents/sign-up.php";
   return (
