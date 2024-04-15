@@ -1,7 +1,7 @@
 import AboutUs from "@/components/template/about-us/AboutUs";
 import React from "react";
 async function getData() {
-  const res = await fetch("https://bayan.savvyhost.io/api/settings");
+  const res = await fetch("https://bayan.savvyhost.io/api/settings",{  cache: "no-store"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

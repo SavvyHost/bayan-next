@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 async function getData(id: any) {
-  const res = await fetch(`https://bayan.savvyhost.io/api/courses/${id}`);
+  const res = await fetch(`https://bayan.savvyhost.io/api/courses/${id}`,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

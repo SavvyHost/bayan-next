@@ -12,14 +12,12 @@ import {
   TwitterShareButton,
   WhatsappIcon,
   WhatsappShareButton,
-  //@ts-ignore
 } from "react-share";
 
-import RateAction from "@/components/molecules/RateAction/RateAction";
-import copy from "clipboard-copy";
 import DetailsArticles from "@/components/template/articles/DetailsArticles";
+import copy from "clipboard-copy";
 async function getData(id: any) {
-  const res = await fetch(`https://bayan.savvyhost.io/api/posts/${id}`);
+  const res = await fetch(`https://bayan.savvyhost.io/api/posts/${id}`,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

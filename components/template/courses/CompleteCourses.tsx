@@ -4,10 +4,10 @@ import ImportantCourses from '../Home/important courses/ImportantCourses';
 import { useLocale, useTranslations } from 'next-intl';
 
 const CompleteCourses = ({ data }: any) => {
+  console.log("🚀 ~ CompleteCourses ~ data:", data)
   const t = useTranslations();
   const localeActive = useLocale();
   const isRTL = localeActive == "ar";
-console.log("vvvvvvvvvvvvvvvvvv",data?.data)
   return (
     <div className='container py-[40px] md:my-[50px] '>
       <div className='flex flex-col items-center'>
@@ -38,9 +38,9 @@ console.log("vvvvvvvvvvvvvvvvvv",data?.data)
         </div>
         <div className='col-span-5 lg:order-2'>
           <img
-            src='/assets/images/2b5e07ef5830af050d04e390fcadfaa8.webp'
+            src={data?.data[0]?.image_url}
             alt='complete courses'
-            className='rounded-t-[12px] lg:!rounded-e-[12px] w-full h-full'
+            className='rounded-t-[12px] lg:!rounded-e-[12px] w-full h-[350px]'
           />
         </div>
       </div>

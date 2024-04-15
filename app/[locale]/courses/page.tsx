@@ -1,7 +1,9 @@
 import CompleteCourses from "@/components/template/courses/CompleteCourses";
 import React from "react";
 async function getData() {
-  const res = await fetch("https://bayan.savvyhost.io/api/courses");
+  const res = await fetch("https://bayan.savvyhost.io/api/courses", {
+    cache: "no-store",
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
