@@ -32,10 +32,12 @@ const Footer = () => {
                 <PhoneIcon />
                 {t('phoneNumber')}
               </li>
+            <a href="mailto:bayanacademy.system@gmail.com">
               <li className='text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
                 {t('email')}
               </li>
+            </a>
               {/* <li className='text-white flex items-center justify-start gap-[12px]'>
                 <PhoneIcon />
                 {t('website')}

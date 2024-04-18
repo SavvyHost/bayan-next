@@ -78,12 +78,17 @@ ul {
 
 body,
 * {
-  font-family: 'Cairo', sans-serif;
-}
-.new-font {
+  /* font-family: 'Cairo', sans-serif; */
   font-family: "El Messiri", sans-serif !important;
   font-optical-sizing: auto !important;
   font-style: normal !important;
+  
+}
+.new-font {
+  font-family: 'Cairo', sans-serif;
+  /* font-family: "El Messiri", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-style: normal !important; */
 }
 
 /* @font-face {
@@ -252,7 +257,7 @@ body,
   padding-bottom: 2.5rem !important;
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .customer-review-style .swiper-slide.swiper-slide-next > div {
     width: 400px !important;
     height: 285px !important;
@@ -263,7 +268,7 @@ body,
     width: 100% !important;
     height: 100% !important;
   }
-}
+} */
 /* End Customer Review */
 
 /* Start Footer Section */

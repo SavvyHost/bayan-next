@@ -18,7 +18,6 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ removeOverFlow }) => {
   const localeActive = useLocale();
 
   const isRTL = localeActive == "ar";
-  console.log("🚀 ~ activeLink:", activeLink)
 
   return (
     <ul className='flex  gap-6 xl:!gap-10 tablet:!gap-4 justify-center tablet:flex-col w-full'>

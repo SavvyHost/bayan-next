@@ -4,11 +4,11 @@ import { FaCheck } from "react-icons/fa";
 const PricePlanCard = ({ item }: any) => {
   return (
     <div
-      className="sm:flex sm:gap-2 flex-col justify-end mb-10 lg:gap-0"
+      className="sm:flex sm:gap-2 flex-col  mb-10 lg:gap-0"
       // key={index}
     >
       <>
-        <div className="border-soild sm:w-full  border-[1px]  border-textGray custom-box-shadow-3 rounded-t-none rounded-[8px] my-[12px] ">
+        <div className="border-soild sm:w-full  border-[1px]  border-textGray custom-box-shadow-3 rounded-t-none rounded-[8px] mt-[12px] ">
           <p className=" font-bold bg-secondary text-white py-4 text-[24px] text-center">
             {item[0].ar}
           </p>

@@ -66,16 +66,16 @@ const Navbar = () => {
       </div>
       <div className="navbar  border-b-[1px] bg-white border-solid border-[rgba(19, 18, 18, 0.10)] bg-background ">
         <div className="container px-4  mx-auto overflow-hidden ">
-          <div className="py-[6px]  flex justify-between items-center ">
+          <div className="  flex justify-between items-center ">
             <Link href="/">
               <Image
-                src="/assets/images/mainlogo.jpg"
+                src="/assets/images/mainlogo2.png"
                 width={86}
-                height={94}
+                height={110}
                 alt="logo"
                 style={{ transform: "scale(1.2)" }}
-                // className="object-contain  !max-h-[70px] md:!max-h-[94px] "
-                className="object-contain "
+                className="object-contain  w-[170px] h-full min-h-[80px] "
+                // className="object-contain "
               />
             </Link>
 

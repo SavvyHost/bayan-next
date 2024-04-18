@@ -18,9 +18,9 @@ const AboutUs = () => {
             {t('title')}
             <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
           </h3>
-          <p className='text-white text-[19px] lg:text-[22px] text-center mt-2'>
+          {/* <p className='text-white text-[19px] lg:text-[22px] text-center mt-2'>
             {t('description')}
-          </p>
+          </p> */}
         </div>
 
         {/* Grid Card */}
@@ -28,7 +28,9 @@ const AboutUs = () => {
           {/* Icon Sections */}
           {[1, 2, 3, 4, 5, 6].map((iconNumber) => (
             <div key={`aboutus-icon-${iconNumber}`} className='flex flex-col items-center'>
-              {React.createElement(require(`@/components/atoms/icons/AboutusIcon${iconNumber}`).default)}
+              <span className='h-[65px]'>
+                {React.createElement(require(`@/components/atoms/icons/AboutusIcon${iconNumber}`).default)}
+              </span>
               <h4 className='text-[18px] lg:text-[22px] font-semibold text-[#DAA63D] mt-[10px]'>
                 {t(`icon${iconNumber}Title`)}
               </h4>

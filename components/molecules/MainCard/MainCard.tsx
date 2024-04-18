@@ -36,7 +36,7 @@ const MainCard: React.FC<MainCardProps> = ({
           <p className='mt-[15px] text-main  h-[120px]'>
             {description
               ? description.length > 190
-                ? description.slice(0, 190) + '...'
+                ? description.slice(0, 170) + '...'
                 : description
               : '-'}
           </p>

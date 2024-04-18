@@ -3,7 +3,7 @@ import MainButton from "@/components/atoms/MainButton";
 import { useLocale } from "next-intl";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination,Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const HeroSection = ({ slides }: any) => {
@@ -99,6 +99,10 @@ const HeroSection = ({ slides }: any) => {
         dir={isRTL ? "rtl" : "ltr"}
         slidesPerView={1}
         loop
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         style={{
           //@ts-ignore
           "--swiper-pagination-color": "#2260AA",
@@ -108,7 +112,7 @@ const HeroSection = ({ slides }: any) => {
           "--swiper-pagination-progressbar-size": "8px",
         }}
         pagination={{ clickable: true }}
-        modules={[Pagination]}
+        modules={[Pagination,Autoplay]}
         watchSlidesVisibility
         watchSlidesProgress
         // autoHeight={true}
@@ -118,11 +122,11 @@ const HeroSection = ({ slides }: any) => {
             key={item?.id}
             className={`!bg-[#F9F7F7] bg-no-repeat bg-cover  !object-contain bg-[url(/assets/images/pattern1.png)] `}
           >
-            <div className="container hero-section-custom min-h-[13rem] xs:min-h-[15rem] lg:!min-h-[29.6875rem] sm:!min-h-[22rem] py-[20px] pb-[3.5rem] md:py-[70px]">
+            <div className=" hero-section-custom min-h-[305px]  md:min-h-[480px] ">
               {/* Image */}
               <div className=" flex !justify-center xl:!justify-end ">
                 <img
-                  className="w-full h-[300px] md:min-h-[400px] "
+                  className="w-full h-[300px] md:min-h-[457px] "
                   src={item?.image}
                   alt="hero image"
                 />

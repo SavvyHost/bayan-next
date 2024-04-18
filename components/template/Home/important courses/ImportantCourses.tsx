@@ -14,7 +14,7 @@ const ImportantCourses = ({ courses, swiper ,hiddenShowMore }: any) => {
   const t = useTranslations();
 
   return (
-    <div className="container mb-[65px] ">
+    <div className="container my-[65px] ">
       <div className="flex flex-col items-center">
         <h3 className="text-[30px] lg:text-[35px] text-primary new-font  font-bold pb-2 relative mb-3">
           {t("The most important courses")}
