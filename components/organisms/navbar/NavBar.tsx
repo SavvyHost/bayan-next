@@ -64,17 +64,18 @@ const Navbar = () => {
           <TawtterSub className="scale-[0.85]" />
         </div>
       </div>
-      <div className="navbar  border-b-[1px] border-solid border-[rgba(19, 18, 18, 0.10)] bg-background ">
-        <div className="container px-4  mx-auto">
+      <div className="navbar  border-b-[1px] bg-white border-solid border-[rgba(19, 18, 18, 0.10)] bg-background ">
+        <div className="container px-4  mx-auto overflow-hidden ">
           <div className="py-[6px]  flex justify-between items-center ">
             <Link href="/">
               <Image
-                src="/assets/images/logosite.webp"
+                src="/assets/images/mainlogo.jpg"
                 width={86}
                 height={94}
                 alt="logo"
                 style={{ transform: "scale(1.2)" }}
-                className="object-contain !max-h-[70px] md:!max-h-[94px]"
+                // className="object-contain  !max-h-[70px] md:!max-h-[94px] "
+                className="object-contain "
               />
             </Link>
 

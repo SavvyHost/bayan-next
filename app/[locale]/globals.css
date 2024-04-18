@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
 /* Start Project initialization */
 
 * {
@@ -11,6 +13,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 
 *::-moz-selection,
 *::selection {
@@ -76,6 +79,11 @@ ul {
 body,
 * {
   font-family: 'Cairo', sans-serif;
+}
+.new-font {
+  font-family: "El Messiri", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-style: normal !important;
 }
 
 /* @font-face {
@@ -301,7 +309,7 @@ body,
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.41);
+  background: #00000021;
   opacity: 1;
   z-index: 1;
   border-radius: 12px;
@@ -393,6 +401,7 @@ body,
 /* End Courses Details Page */
 
 /* How To Start */
+
 .how-to-start ul {
   list-style: none;
   margin: 0;
@@ -411,6 +420,10 @@ body,
   height: calc(100% - (15px + 25px));
 }
 
+[dir='ltr'] .how-to-start ul::after {
+  left: -20px;
+}
+
 .how-to-start ul li {
   position: relative;
   padding-right: 25px;
@@ -426,14 +439,16 @@ body,
   border: 5px solid #dee6ee;
   position: absolute;
   right: -9px;
+  
   top: 5px;
   border-radius: 10px;
   animation: dotAnimation 5s infinite;
+  -webkit-animation: dotAnimation 5s infinite;
 }
-/* [dir='ltr'] .how-to-start ul li::after{
-  right: inherit;
+[dir='ltr'] .how-to-start ul li::after{
+  left: -29px;
 
-} */
+}
 
 .how-to-start ul li:nth-child(1)::after {
   animation-delay: 0s;

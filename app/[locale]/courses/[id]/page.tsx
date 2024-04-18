@@ -2,6 +2,7 @@
 import ArrowLeft from "@/components/atoms/icons/ArrowLeft";
 import PricePlanCard from "@/components/molecules/price plan/PricePlanCard";
 import SubscriptionCard from "@/components/molecules/subscriptionCard/SubscriptionCard";
+import CustomerOpinions from "@/components/template/Home/customer opinions/CustomerOpinions";
 import TrainersComponents from "@/components/template/courses/TrainersComponents";
 import { useLocale } from "next-intl";
 import Image from "next/image";
@@ -114,16 +115,17 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className="flex flex-col gap-10 lg:grid lg:grid-cols-4 lg:gap-4">
-        <div className="col-span-3">
+        <div className="col-span-4">
           {/* Swiper */}
           <TrainersComponents pageDetails={true} data={data?.data?.trainers} />
         </div>
-        <div className="flex justify-center mb-10 !w-full xl:hidden">
+        
+      </div>
+      <div className="flex justify-center mb-10 !w-full xl:hidden">
           <div className="w-full flex justify-center items-end mb-10 max-w-[400px]">
             <SubscriptionCard />
           </div>
-        </div>
-      </div>
+        </div> 
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
       {/* <CustomerOpinions pageDetails={true} /> */}

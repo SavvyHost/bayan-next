@@ -30,8 +30,9 @@ const HomePage = async () => {
     <>
       <HeroSection slides={data?.data?.slides} />
       <StepsToJoin data={settingData?.data} />
-      <Aboutus />
       <ImportantCourses courses={data?.data?.courses} />
+      <Aboutus />
+
       {/* <AboutUs data={settingData?.data} /> */}
       <ImportantTrainers trainers={data?.data?.trainers} />
       <CustomerOpinions reviews={data?.data?.reviews} />

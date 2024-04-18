@@ -10,7 +10,7 @@ const ArticlesImportant = ({ data }: any) => {
   const localeActive = useLocale();
   const isRTL = localeActive === "ar";
   const t = useTranslations();
-
+  
   return (
     <>
       <div className={`container py-[40px] md:my-[50px] ${isRTL ? "rtl" : ""}`}>

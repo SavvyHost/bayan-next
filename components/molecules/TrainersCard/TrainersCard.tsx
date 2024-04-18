@@ -18,9 +18,9 @@ const TrainersCard: React.FC<TrainersCardProps> = ({
       <Image
         src={image}
         alt='trainers'
-        width={136}
-        height={136}
-        className='rounded-full h-[136px] w-[136px] max-h-[136px] min-h-[136px] max-w-[136px] min-w-[136px]'
+        width={220}
+        height={220}
+        className='rounded-[8px] h-[220px] w-[220px] max-h-[220px] min-h-[220px] max-w-[220px] min-w-[220px]'
       />
 
       <h5 className='text-main   text-[18px] font-bold mt-[10px]'>{title}</h5>

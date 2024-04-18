@@ -15,14 +15,14 @@ const CustomerOpinions = ({ pageDetails, reviews }: any) => {
   return (
     <div className='container my-[80px] customer-review-style'>
       <div className='flex flex-col items-center mb-[50px]'>
-        <h3 className='text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2  mb-3'>
+        <h3 className='text-[29px] lg:text-[34px] text-primary new-font  font-bold relative pb-2  mb-3'>
          {t("Customer opinions")}
           <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>
 
-        <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold'>
+        {/* <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold'>
           تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان{' '}
-        </p>
+        </p> */}
       </div>
 
       {pageDetails && (

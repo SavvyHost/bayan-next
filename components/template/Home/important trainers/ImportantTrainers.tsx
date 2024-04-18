@@ -13,13 +13,14 @@ const ImportantTrainers = ({ trainers }: any) => {
     <div className='container my-[100px] '>
       <div className='flex flex-col items-center mb-[4.5rem]'>
         <h3 className='text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2 mb-3'>
-         {t("The most important trainers")}
+          {t("The most important trainers")}
           <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>
 
-        <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold'>
+        {/* <p className='text-main text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold'>
           تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان{' '}
-        </p>
+        </p> */}
+
       </div>
 
       {/* Swiper */}

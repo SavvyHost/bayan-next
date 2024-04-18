@@ -24,7 +24,7 @@ const CompleteCourses = ({ data }: any) => {
       <div className='flex flex-col lg:grid lg:grid-cols-12 mt-[45px] md:mt-[70px] bg-background rounded-[12px] custom-box-shadow-2'>
         <div className='col-span-7 flex flex-col gap-6 px-[15px] py-[25px] md:p-[45px] order-2 lg:!order-1'>
           <h3 className='text-[28px] xs:text-[36px] text-primary  '>
-           {isRTL ? data?.data[0]?.title_ar :data?.data[0]?.title_en }
+            {isRTL ? data?.data[0]?.title_ar :data?.data[0]?.title_en }
           </h3>
 
           <p className='  text-[#616161] xl:pe-[100px]'>

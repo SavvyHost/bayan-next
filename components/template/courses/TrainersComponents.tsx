@@ -12,7 +12,7 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
     <>
       {/* Swiper */}
       <div className='mt-[60px] '>
-        <h5 className='text-[20px]   text-[#3855A5] mb-[24px]'>المدربون</h5>
+        <h5 className='text-[30px] font-bold text-center text-primary mb-[24px]'>المدربون</h5>
 
         {pageDetails && (
           <div className='tablet:block hidden'>

@@ -18,7 +18,7 @@ const AboutUs = () => {
             {t('title')}
             <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
           </h3>
-          <p className='text-white text-[15px] lg:text-[17px] text-center mt-2'>
+          <p className='text-white text-[19px] lg:text-[22px] text-center mt-2'>
             {t('description')}
           </p>
         </div>
@@ -29,7 +29,7 @@ const AboutUs = () => {
           {[1, 2, 3, 4, 5, 6].map((iconNumber) => (
             <div key={`aboutus-icon-${iconNumber}`} className='flex flex-col items-center'>
               {React.createElement(require(`@/components/atoms/icons/AboutusIcon${iconNumber}`).default)}
-              <h4 className='text-[18px] lg:text-[22px] text-white mt-[10px]'>
+              <h4 className='text-[18px] lg:text-[22px] font-semibold text-[#DAA63D] mt-[10px]'>
                 {t(`icon${iconNumber}Title`)}
               </h4>
               <p className='text-[#f7f7f7] text-[15px] lg:text-[16px] xs:w-[60%] sm:!w-[90%] text-center'>

@@ -20,7 +20,7 @@ const MainCard: React.FC<MainCardProps> = ({
 }) => {
   return (
     <Link href={`/courses/${id}`} className='h-full'>
-      <div className='bg-white custom-box-shadow rounded-b-lg pt-[11px] pb-[5px] md:pb-[10px] h-full'>
+      <div className='bg-white custom-box-shadow rounded-b-lg pt-[11px] pb-[5px] h-full'>
         <div className='flex justify-center '>
           <Image
             className='max-h-[240px] min-h-[240px]'
@@ -31,8 +31,8 @@ const MainCard: React.FC<MainCardProps> = ({
           />
         </div>
 
-        <div className='ms-[20px] md:me-[40px] me-[20px] mb-[35px] mt-[25px]'>
-          <h4 className='  font-bold text-main text-[19px]'>{title}</h4>
+        <div className='ms-[20px] md:me-[40px] me-[20px] mb-[20px] mt-[25px]'>
+          <h4 className='font-bold text-[19px] text-primary'>{title}</h4>
           <p className='mt-[15px] text-main  h-[120px]'>
             {description
               ? description.length > 190
@@ -41,7 +41,7 @@ const MainCard: React.FC<MainCardProps> = ({
               : '-'}
           </p>
 
-          <div className='w-[96px] h-[42px] mt-[30px]'>
+          <div className='w-[120px] h-[42px] mt-[30px]'>
             <MainButton title={buttonContent} />
           </div>
         </div>

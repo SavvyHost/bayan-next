@@ -18,7 +18,7 @@ const PricePlanCard = ({ item }: any) => {
           <ul>
             {item?.slice(1).map((subItem: any, index: any) => (
               <li
-                className="flex justify-center items-center gap-4 px-6"
+                className="flex items-center gap-4 px-6"
                 key={index}
               >
                 <span className="text-[#EEA62E] text-[20px]">
@@ -60,7 +60,7 @@ const PricePlanCard = ({ item }: any) => {
           </ul>
           <div className="flex justify-center w-full">
             <div className="w-max h-[42px] mt-[20px]">
-              <MainButton title=" إنضم" />
+              <MainButton title=" إنضمام" />
             </div>
           </div>
         </div>
