@@ -1,10 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useLocale,useTranslations, } from "next-intl";
+import {getTranslations} from 'next-intl/server';
+
 import ArrowLeft from "@/components/atoms/icons/ArrowLeft";
 import PricePlanCard from "@/components/molecules/price plan/PricePlanCard";
 import SubscriptionCard from "@/components/molecules/subscriptionCard/SubscriptionCard";
 import CustomerOpinions from "@/components/template/Home/customer opinions/CustomerOpinions";
 import TrainersComponents from "@/components/template/courses/TrainersComponents";
-import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
@@ -22,6 +24,8 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
   const data = await getData(params?.id);
   const localeActive = useLocale();
   const isRTL = localeActive == "ar";
+  const t = await getTranslations('CoursesPage');
+
   return (
     <div className="container">
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-[60px] mt-[20px] mb-[50px] lg:mb-[100px] ">
@@ -31,7 +35,8 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
             <span>
               <ArrowLeft />
             </span>
-            مدخل الي اللغه العربية
+            {t("Introduction to the Arabic language")}
+            {/* مدخل الي اللغه العربية */}
           </h4>
 
           <div
@@ -54,7 +59,7 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
 
           {/* What will you learn? */}
           <div className="mt-[60px] ">
-            <h5 className="text-[20px]   text-[#3855A5]">ماذا ستتعلم؟</h5>
+            <h5 className="text-[20px]   text-[#3855A5]">{t("What will you learn")} </h5>
 
             <p className="text-main text-[15px] mt-[24px]">
               {isRTL
@@ -68,7 +73,8 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
           <div className="sm:flex sm:gap-2 flex-col lg:gap-0 !sticky !top-0">
             <div className="border-soild sm:w-full !sticky !top-5 sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]">
               <h6 className="text-[20px] mb-[20px] text-secondary   text-center">
-                إشترك معنا الأن
+                {/* إشترك معنا الأن */}
+                {t("Subscribe with us now")}
               </h6>
 
               <ul className="flex gap-10 justify-center">
@@ -129,6 +135,7 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
       {/* <CustomerOpinions pageDetails={true} /> */}
+      
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
       {/* <ImportantCourses courses /> */}

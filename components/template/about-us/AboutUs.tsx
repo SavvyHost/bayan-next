@@ -6,7 +6,7 @@ import React from "react";
 const AboutUs = ({ data }: any) => {
   const localeActive = useLocale();
   const isRTL = localeActive == "ar";
-  const t = useTranslations('');
+  const t = useTranslations('AboutUs');
 
   return (
     <div className="container my-16 flex mb-20 flex-col lg:flex-row">
@@ -23,7 +23,7 @@ const AboutUs = ({ data }: any) => {
         </p>
 
         <div className="w-[106px] h-[42px] mt-10">
-          <MainButton title="إنضم" />
+          <MainButton title={t("join")} />
         </div>
       </div>
 

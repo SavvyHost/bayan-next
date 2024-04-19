@@ -3,6 +3,8 @@ import BookMark from '@/components/atoms/icons/BookMarkNew';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useLocale, useTranslations } from "next-intl";
+
 
 interface SecondaryCardProps {
   img?: string | any;
@@ -23,6 +25,8 @@ const SecondaryCard: React.FC<SecondaryCardProps> = ({
   important,
   id,
 }) => {
+  const t = useTranslations();
+
   return (
     <Link href={`/articles/${id}`}>
       <div className='relative animation-translateY '>
@@ -53,12 +57,12 @@ const SecondaryCard: React.FC<SecondaryCardProps> = ({
               {description}
             </p>
 
-            <div className='w-[96px] h-[42px] mt-[4px]'>
+            <div className='w-[105px] h-[42px] mt-[4px]'>
               <Link
                 href={articlesPath ? articlesPath : '/articles'}
                 className='text-primary underline  font-bold text-[20px] hover:text-secondary'
               >
-                إقرأ المزيد
+                {t("Read More")}
               </Link>
             </div>
           </div>

@@ -32,11 +32,11 @@ const HomePage = async () => {
       <StepsToJoin data={settingData?.data} />
       <ImportantCourses courses={data?.data?.courses} />
       <Aboutus />
-
       {/* <AboutUs data={settingData?.data} /> */}
       <ImportantTrainers trainers={data?.data?.trainers} />
       <CustomerOpinions reviews={data?.data?.reviews} />
       <ImportantArticles posts={data?.data?.posts} />
+      
     </>
   );
 };

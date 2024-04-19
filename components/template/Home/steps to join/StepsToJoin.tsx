@@ -12,8 +12,7 @@ const StepsToJoin = ({ data }: any) => {
       <p className="text-[#4F4F4F] text-[16px] md:text-[17px] text-center max-w-[400px] mx-auto mb-4">
           {/* معنا.. تخطَّ حواجز اللغة. منصة علمني العربية منصة تعليمية تهدف
           لتعليم اللغة العربية لغير الناطقين بها، عبر تطبيقات الهواتف الذكية. */}
-          اهلا بك في أكاديمية بيان يمكنك حفظ القرآن الكريم بسهولة انت وأطفالك مع مجموعة كبيرة من معلمين وشيوخ الأزهر الشريف 
-
+          {t("introduction")}
       </p>
       <div className=" flex flex-col md:flex-row">
         <div className="md:w-[70%] flex flex-col gap-3 col-span-2">

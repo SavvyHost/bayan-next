@@ -22,7 +22,7 @@ const Footer = () => {
           <div className=' flex justify-center md:w-[50%]'>
             <JoinUs />
           </div>
-
+          
           <div className=''>
             <h6 className='text-secondary text-[24px] font-bold mb-6'>
               {t('contactUs')}

@@ -18,6 +18,7 @@ const ImportantArticles = ({ posts }: any) => {
           طريق الهواتف الذكيه
         </p> */}
       </div>
+
       <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  xl:flex xl:flex-row xl:gap-16 xl:justify-center  gap-16 justify-items-center mt-[40px]">
         {posts.map((item: any) => (
           <div className="max-w-[340px] md:animation-translateY" key={item?.id}>

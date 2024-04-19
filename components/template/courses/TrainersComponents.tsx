@@ -4,15 +4,20 @@ import TrainersCard from '@/components/molecules/TrainersCard/TrainersCard';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTranslations } from 'next-intl';
 
 import { Autoplay } from 'swiper/modules';
 import MainButton from '@/components/atoms/MainButton';
 const TrainersComponents = ({ pageDetails, data }: any) => {
+  const t = useTranslations('CoursesPage')
   return (
     <>
       {/* Swiper */}
       <div className='mt-[60px] '>
-        <h5 className='text-[30px] font-bold text-center text-primary mb-[24px]'>المدربون</h5>
+        <h5 className='text-[30px] font-bold text-center text-primary mb-[24px]'>
+          {t("trainers")}
+          {/* المدربون */}
+        </h5>
 
         {pageDetails && (
           <div className='tablet:block hidden'>
@@ -76,7 +81,7 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
           </Swiper>
         </div>
         <p className='text-main text-[20px] text-center  my-[24px] font-bold  '>
-          ومجموعة كبيرة من معلمين ومعلمات الأزهر الشريف
+          {t("large group")}
         </p>
       </div>
     </>

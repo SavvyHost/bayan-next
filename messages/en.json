@@ -1,28 +1,42 @@
 {
   "Home": "Home",
   "Courses": "Courses",
-  "Album": "Album",
+  "Album": "Honorary board",
   "Articles": "Articles",
   "Contact Us": "Contact Us",
   "About Us": "About Us",
+  "introduction" : "Welcome to Bayan Academy. You can memorize the Holy Qur’an easily for you and your children with a large group of Al-Azhar Sheikhs’ teachers. " ,
   "Simple steps to join":"Simple steps to join",
   "The most important trainers":"The most important trainers",
   "The most important courses":"The most important courses",
+  "Details": "Details",
+  "See More": "See More",
   "Customer opinions":"Customer opinions",
   "Most important articles":"Most important articles",
-  "Complete your courses":"Complete your courses",
+
   "highlights":"highlights",
   "mostImportantArticles": "Most Important Articles",
   "importantArticlesDescription": "Teaching the Holy Quran with rules of recitation and writing through the method of Noor Al-Bayan via smartphones.",
   "articleTitle": "Article Title",
   "articleDate": "January 27, 2024",
   "articleDescription": "With us, break down language barriers. The 'Teach Me Arabic' platform is an educational platform aimed at teaching the Arabic language to non-native speakers, through smartphone applications. Lorem Ipsum is a dummy model used in designs to present to the client to visualize how texts are placed in designs, whether they are printed designs… brochure or flyer for example… or website models…",
-  "readMore": "Read More",
+  "Read More": "Read More",
   "completeCourses": "Complete Courses",
   "importantArticles": "Important Articles",
   "importantArticlesSubtitle": "Teaching the Holy Quran with rules of recitation and writing through the method of Noor Al-Bayan via smartphones.",
   "viewMore": "View More",
   "About us":"About us",
+  "CoursesPage" : {
+    "Complete your courses":"Complete your courses",
+    "Description Complete your courses": "Teaching the Holy Qur’an with rulings, reading and writing using the Noor Al-Bayan method",
+    "Join": "Join",
+    "Introduction to the Arabic language" : "Introduction to the Arabic language",
+    "What will you learn": "What will you learn?",
+    "Subscribe with us now": "Subscribe with us now",
+    "trainers": "Trainers",
+    "large group" : "And a large group of Al-Azhar Al-Sharif teachers"
+  },
+
   "ContactUs": {
     "title": "Contact Us",
     "mainOffice": "Head Office",
@@ -39,6 +53,9 @@
     "infoDescription": "With the absence of Quran circles we depended on to teach our children the Quran and basic religious matters, a digital alternative that fits into our internet-based lives was necessary. Thus, the idea of the academy that focuses on Quran memorization, explanation, and application in a way that encourages ethical behavior among children."
   },
   "Footer": {
+    "Join Now" : "Join Now",
+    "Your Email" : "Your Email",
+    "Message" : "A confirmation message will be sent to your account",
     "contactUs": "Contact Us",
     "phoneNumber": "Phone: 0102347890",
     "email": "Email: Comp@software.com",
@@ -48,20 +65,23 @@
     "allRightsReserved": "All rights reserved © OurSite 2024"
   },
   "AboutUs": {
+    "About us": "About Us" ,
     "title": "About Us",
     "description": "Teaching the Holy Quran with its rules, reading and writing through the Noor Al-Bayan method.",
-    "icon1Title": "Quran Memorization",
-    "icon1Description": "Memorization of the Quran and explanation of meanings.",
+    "icon1Title": "Memorizing the Qur’an",
+    "icon1Description": "Memorizing the Holy Qur’an with interpretation and clarifying the meanings of the verses in a manner appropriate to the age of the learner.",
     "icon2Title": "Choose Your Time!",
-    "icon2Description": "Choosing the right time for the mother with specialized teachers and also interpretation and explanation of verses.",
+    "icon2Description": "You can choose the timing of the episodes at a time that suits you.",
     "icon3Title": " with You Step by Step",
-    "icon3Description": "Individual attention for each child with a dedicated teacher to ensure understanding and prevent distraction.",
-    "icon4Title": "Special Offers for Mothers",
-    "icon4Description": "Not forgetting mothers who want to memorize the Quran and whose time and engagements do not help them.",
-    "icon5Title": "Unique Rewards",
-    "icon5Description": "Interpretation and certainly applying this in the reality of children.",
-    "icon6Title": "The Educational Role",
-    "icon6Description": "Encouraging them to adopt the morals mentioned in the Quran, not just an educational role but also a nurturing one."
+    "icon3Description": "To pay individual attention to each child and follow up on his progress to ensure maximum benefit from the circle time.",
+    "icon4Title": "service around the clock",
+    "icon4Description": "You can contact our support team throughout the day for any inquiry or complaint.",
+    "icon5Title": "Children's friends",
+    "icon5Description": "We provide teachers who specialize in dealing with our young loved ones from the age of 4 years.",
+    "icon6Title": "reading and writing",
+    "icon6Description": "We help your child learn to read and write using modern educational methods and activities.",
+    "join" : "Join"
+
   }
   
 }

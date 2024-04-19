@@ -37,7 +37,7 @@ const ImportantCourses = ({ courses, swiper ,hiddenShowMore }: any) => {
                   description={
                     isRTL ? item?.description_ar : item?.description_en
                   }
-                  buttonContent="إعرف أكثر"
+                  buttonContent={t("Details")}
                 />
               </div>
             ))}
@@ -46,7 +46,7 @@ const ImportantCourses = ({ courses, swiper ,hiddenShowMore }: any) => {
             hiddenShowMore ? "" : 
           <div className="flex justify-center w-full">
             <div className="w-max h-[42px] mt-[30px]">
-              <MainButton title="عرض المزيد"  link="/courses"/>
+              <MainButton title={t("See More")}  link="/courses"/>
             </div>
           </div>
           }
