@@ -28,17 +28,28 @@ export default function RootLayout({
       <head>
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-MGQ5EK3E25"
+          src="https://www.googletagmanager.com/gtag/js?id=G-JHCVD723FZ"
         ></Script>
         <Script id="google-analytics">
-          {`window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-MGQ5EK3E25');`}
+          {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JHCVD723FZ');
+      
+    `}
         </Script>
       </head>
       <body className={inter.className}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NV7PP3KT"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LayoutPages>{children}</LayoutPages>
         </NextIntlClientProvider>

@@ -6,7 +6,6 @@ import Link from "next/link";
 import React from "react";
 
 const ArticlesImportant = ({ data }: any) => {
-  console.log("🚀 ~ ArticlesImportant ~ data:", data);
   const localeActive = useLocale();
   const isRTL = localeActive === "ar";
   const t = useTranslations();
@@ -78,7 +77,7 @@ const ArticlesImportant = ({ data }: any) => {
                       ? item?.description_ar.slice(0, 60)
                       : item?.description_en.slice(0, 60)
                   }
-                  articlesPath="/articles"
+                  // articlesPath="/articles"
                   important
                 />
               </div>

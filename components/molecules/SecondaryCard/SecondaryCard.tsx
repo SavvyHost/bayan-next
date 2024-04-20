@@ -59,7 +59,7 @@ const SecondaryCard: React.FC<SecondaryCardProps> = ({
 
             <div className='w-[105px] h-[42px] mt-[4px]'>
               <Link
-                href={articlesPath ? articlesPath : '/articles'}
+                href={articlesPath ? articlesPath : `/articles/${id}`}
                 className='text-primary underline  font-bold text-[20px] hover:text-secondary'
               >
                 {t("Read More")}
