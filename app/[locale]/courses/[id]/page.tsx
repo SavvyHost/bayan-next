@@ -19,9 +19,18 @@ async function getData(id: any) {
   }
   return res.json();
 }
+async function getReviewsData(locale: any) {
+  const res = await fetch(`https://bayan.savvyhost.io/api/reviews?lang=${locale}` ,{  cache: "no-store"});
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
+}
 
 const CoursesPageId = async ({ params }: { params: { id: string } }) => {
   const data = await getData(params?.id);
+  //@ts-ignore
+  const reviewsData = await getReviewsData();
   const localeActive = useLocale();
   const isRTL = localeActive == "ar";
   const t = await getTranslations('CoursesPage');
@@ -134,7 +143,7 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
         </div> 
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
-      {/* <CustomerOpinions pageDetails={true} /> */}
+      <CustomerOpinions pageDetails={true} reviews={reviewsData?.data} />
       
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}

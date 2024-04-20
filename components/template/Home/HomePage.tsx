@@ -8,14 +8,14 @@ import ImportantTrainers from './important trainers/ImportantTrainers';
 import StepsToJoin from './steps to join/StepsToJoin';
 
 async function getData(locale: any) {
-  const res = await fetch(`https://bayan.savvyhost.io/api/home?lang=${locale}`);
+  const res = await fetch(`https://bayan.savvyhost.io/api/home?lang=${locale}` ,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
   return res.json();
 }
 async function getSettingData(locale:any) {
-  const res = await fetch(`https://bayan.savvyhost.io/api/settings?lang=${locale}`);
+  const res = await fetch(`https://bayan.savvyhost.io/api/settings?lang=${locale}` ,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }

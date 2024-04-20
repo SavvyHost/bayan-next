@@ -4,6 +4,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Inter } from "next/font/google";
 import "../../src/styles/animation.css";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +23,21 @@ export default function RootLayout({
 }) {
   const messages = useMessages();
 
-return (
+  return (
     <html lang={locale} dir="rtl">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MGQ5EK3E25"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-MGQ5EK3E25');`}
+        </Script>
+      </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LayoutPages>{children}</LayoutPages>
