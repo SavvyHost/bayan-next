@@ -56,6 +56,7 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-NV7PP3KT"
             height="0"
             width="0"
+            //@ts-ignore
             style="display:none;visibility:hidden"
           ></iframe>
         </noscript>
