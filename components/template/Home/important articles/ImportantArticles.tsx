@@ -1,3 +1,4 @@
+import MainButton from "@/components/atoms/MainButton";
 import SecondaryCard from "@/components/molecules/SecondaryCard/SecondaryCard";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -37,6 +38,11 @@ const ImportantArticles = ({ posts }: any) => {
             />
           </div>
         ))}
+      </div>
+      <div className="flex justify-center w-full">
+        <div className="w-max h-[42px] mt-[30px]">
+          <MainButton title="عرض المزيد" link="/articles" />
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const ArticlesImportant = ({ data }: any) => {
   const localeActive = useLocale();
   const isRTL = localeActive === "ar";
   const t = useTranslations();
-  
+
   return (
     <>
       <div className={`container py-[40px] md:my-[50px] ${isRTL ? "rtl" : ""}`}>
@@ -34,18 +34,18 @@ const ArticlesImportant = ({ data }: any) => {
             </p>
             <div>
               <Link
-                href="/articles"
+                href={`/articles/${data[0]?.id}`}
                 className="text-primary underline font-bold text-[20px] hover:text-secondary"
               >
-                {t("readMore")}
+                {t("Read More")}
               </Link>
             </div>
           </div>
           <div className="col-span-5 lg:order-2">
             <img
-              src="/assets/images/2b5e07ef5830af050d04e390fcadfaa8.webp"
+              src={data[0]?.image}
               alt={t("completeCourses")}
-              className="rounded-t-[12px] lg:!rounded-e-[12px] w-full h-full"
+              className="rounded-t-[12px] lg:!rounded-e-[12px] w-full h-[350px]"
             />
           </div>
         </div>

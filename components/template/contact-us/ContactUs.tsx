@@ -1,8 +1,13 @@
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
-const ContactUs = () => {
+
+const ContactUs = async ({data}:any) => {
+  console.log("🚀 ~ ContactUs ~ data:", data)
   const t = useTranslations('ContactUs');
+  const localeActive = useLocale();
+
+  const isRTL = localeActive == "ar";
 
   return (
     <div className='Contact-us-style'>
@@ -66,7 +71,8 @@ const ContactUs = () => {
             {t('title')}
           </h3>
           <p className='lg:mt-[40px] mt-[20px] text-main lg:text-[19px] text-[16px]'>
-            {t('infoDescription')}
+            {/* {t('infoDescription')} */}
+            {isRTL ? data?.data?.description_ar : data?.data?.description_en }
           </p>
         </div>
       </div>
