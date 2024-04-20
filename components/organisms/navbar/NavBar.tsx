@@ -9,16 +9,21 @@ import FaceBookSub from "@/components/atoms/icons/facebookSub";
 import TawtterSub from "@/components/atoms/icons/TawtterSub";
 import InstaSub from "@/components/atoms/icons/InstaSub";
 import YouTubeSub from "@/components/atoms/icons/youtubeSub";
-import { useLocale } from "next-intl";
+import { useLocale ,useTranslations} from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useTransition, useEffect } from "react";
+import MainButton from "@/components/atoms/MainButton";
 
 const Navbar = () => {
+  const t = useTranslations();
+
   const [mobiledrawer, setMoblieDrawer] = useState(false);
   const toggleDrawer = () => {
     setMoblieDrawer((prevState) => !prevState);
     document.body.classList.toggle("overflowNone");
   };
+
+
 
   const removeOverFlow = () => {
     setMoblieDrawer(() => false);
@@ -48,37 +53,49 @@ const Navbar = () => {
 
   return (
     <>
-      <div className=" lg:!hidden h-[64px] py-[12px] flex items-center bg-[#2260aa]">
-        <div className="flex gap-4 px-4 w-full justify-end ">
-          <button
-            type="button"
-            className="text-white"
-            onClick={() => switchLocale(localeActive === "en" ? "ar" : "en")}
-          >
-            {localeActive == "en" ? "عربي" : "English"}
-          </button>
-          <span className="text-white text-[19px] font-bold">|</span>
-          <FaceBookSub className="scale-[0.85]" />
-          <YouTubeSub className="scale-[0.85]" />
-          <InstaSub className="scale-[0.85]" />
-          <TawtterSub className="scale-[0.85]" />
-        </div>
+      <div className="  h-[64px] py-[12px] flex items-center bg-[#2260aa]">
+          <div className="flex gap-2 px-4 w-full ">
+            <button
+              type="button"
+              className="text-white"
+              onClick={() => switchLocale(localeActive === "en" ? "ar" : "en")}
+            >
+              {localeActive == "en" ? "عربي" : "English"}
+            </button>
+            <span className="text-white text-[19px] font-bold">|</span>
+            <FaceBookSub className="scale-[0.85]" />
+            <YouTubeSub className="scale-[0.85]" />
+            <InstaSub className="scale-[0.85]" />
+          </div>
+          <div className="flex justify-end gap-2 items-center w-full px-[10px]">
+
+            <Link href='https://app.bayan-academy.com/parents/' target="_blank">
+              <button className=" text-[#2260aa] border border-white bg-white  p-1 md:p-2 md:px-[10px] rounded">
+                {t('Sign In')}
+              </button>
+            </Link>
+            <Link href='https://app.bayan-academy.com/parents/sign-up.php' target="_blank">
+              <button className=" text-white border border-white p-1 px-[6px] md:p-2 md:px-[10px] rounded">
+                {t('Register')}
+              </button>
+            </Link>
+          </div>
+
       </div>
-      <div className="navbar  border-b-[1px] bg-white border-solid border-[rgba(19, 18, 18, 0.10)] bg-background ">
+      <div className="navbar py-5  border-b-[1px] bg-white border-solid border-[rgba(19, 18, 18, 0.10)] bg-background ">
         <div className="container px-4  mx-auto overflow-hidden ">
           <div className="  flex justify-between items-center ">
             <Link href="/">
               <Image
-                src="/assets/images/mainlogo2.png"
+                src="/assets/images/mainlogo5.png"
                 width={86}
                 height={110}
                 alt="logo"
                 style={{ transform: "scale(1.2)" }}
-                className="object-contain  w-[170px] h-full min-h-[80px] "
+                className="object-contain  w-[160px] h-full max-h-[90px] "
                 // className="object-contain "
               />
             </Link>
-
             <div
               className={`nav-contain w-full flex-basis-auto tablet:!pb-24  flex justify-between items-center content-center tablet:px-6 ${
                 mobiledrawer ? "active-nav" : ""

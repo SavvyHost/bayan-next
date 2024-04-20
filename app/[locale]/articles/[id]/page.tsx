@@ -57,8 +57,7 @@ const ArticlesPageId = ({ params }: { params: { id: string } }) => {
           <div className="xs:flex hidden  flex-col gap-6 items-center bg-[#E6E6E6] p-[24px] rounded-[63px] py-[40px]">
             <button
               onClick={increaseTextSize}
-              className="text-primary text-[45px] 
-"
+              className="text-primary text-[45px] "
             >
               <div className="">
                 <Plural />
@@ -76,6 +75,7 @@ const ArticlesPageId = ({ params }: { params: { id: string } }) => {
               </div>
             </button>
           </div>
+
 
           <div className="flex xs:flex-col  gap-6 items-center bg-[#E6E6E6] p-[24px] rounded-[63px] xs:py-[40px]">
             <ul className="flex xs:flex-col justify-center xs:gap-[30px] w-full xs:w-[unset] gap-3">
@@ -138,7 +138,6 @@ const ArticlesPageId = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
         {/*  */}
-
         <DetailsArticles textSize={textSize} params={params}/>
       </div>
     </>

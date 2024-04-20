@@ -42,7 +42,7 @@ const DetailsArticles = ({ textSize, params }: any) => {
             width={400}
             height={300}
             alt='articles details'
-            className='!w-full'
+            className='!w-full max-h-[300px]'
           />
         </div>
 

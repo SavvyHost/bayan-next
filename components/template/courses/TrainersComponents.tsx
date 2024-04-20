@@ -52,6 +52,7 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
               disableOnInteraction: false,
             }}
             modules={[Autoplay]}
+            loop={true}
             breakpoints={{
               300: {
                 slidesPerView: 1,
@@ -63,6 +64,10 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
               },
               800: {
                 slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 5,
                 spaceBetween: 30,
               },
             }}

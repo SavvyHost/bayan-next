@@ -80,7 +80,6 @@ const ImportantCourses = ({ courses, swiper ,hiddenShowMore }: any) => {
                 slidesPerView: 2,
                 spaceBetween: 40,
               },
-
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 30,

@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 
 const ContactUs = async ({data}:any) => {
-  console.log("🚀 ~ ContactUs ~ data:", data)
+  // console.log("🚀 ~ ContactUs ~ data:", data)
   const t = useTranslations('ContactUs');
   const localeActive = useLocale();
 

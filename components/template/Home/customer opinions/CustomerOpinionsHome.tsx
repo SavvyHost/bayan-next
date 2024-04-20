@@ -7,13 +7,13 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const CustomerOpinions = ({ pageDetails, reviews }: any) => {
+const CustomerOpinionsHome = ({ pageDetails, reviews }: any) => {
   const localeActive = useLocale();
   const isRTL = localeActive == "ar";
   const t = useTranslations();
 
   return (
-    <div className='my-[80px] customer-review-style '>
+    <div className='container my-[80px] customer-review-style '>
       <div className='flex flex-col items-center mb-[50px]'>
         <h3 className='text-[29px] lg:text-[34px] text-primary new-font  font-bold relative pb-2  mb-3'>
          {t("Customer opinions")}
@@ -93,4 +93,4 @@ const CustomerOpinions = ({ pageDetails, reviews }: any) => {
   );
 };
 
-export default CustomerOpinions;
+export default CustomerOpinionsHome;
