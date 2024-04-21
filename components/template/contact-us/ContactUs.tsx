@@ -2,8 +2,7 @@ import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 
 
-const ContactUs = async ({data}:any) => {
-  // console.log("🚀 ~ ContactUs ~ data:", data)
+const ContactUs =  ({data}:any) => {
   const t = useTranslations('ContactUs');
   const localeActive = useLocale();
 
