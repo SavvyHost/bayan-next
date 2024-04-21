@@ -85,7 +85,7 @@ body,
   
 }
 .new-font {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', sans-serif !important;
   /* font-family: "El Messiri", sans-serif !important;
   font-optical-sizing: auto !important;
   font-style: normal !important; */
@@ -314,7 +314,7 @@ body,
   height: 100%;
   top: 0;
   left: 0;
-  background: #00000021;
+  background: #00000009;
   opacity: 1;
   z-index: 1;
   border-radius: 12px;

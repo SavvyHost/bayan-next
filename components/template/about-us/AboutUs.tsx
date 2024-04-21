@@ -11,7 +11,7 @@ const AboutUs = ({ data }: any) => {
   return (
     <div className="container my-16 flex mb-20 flex-col lg:flex-row">
       <div className="w-full lg:max-w-[35%] order-2 lg:order-1">
-        <h3 className=" font-bold lg:text-[45px] text-[30px] text-primary">
+        <h3 className=" font-bold lg:text-[45px] text-[30px] text-primary new-font">
           {t("About us")}
         </h3>
         <h3 className="  lg:text-[28px] text-[22px] text-secondary">

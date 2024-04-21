@@ -80,7 +80,7 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
 
         <div className="col-span-3 hidden xl:!flex">
           <div className="sm:flex sm:gap-2 flex-col lg:gap-0 !sticky !top-0">
-            <div className="border-soild sm:w-full !sticky !top-5 sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]">
+            <div className="  sm:w-full !sticky !top-5 sm:flex sm:flex-col sm:justify-center border-[1px] p-6 border-textGray custom-box-shadow-2 rounded-[8px] my-[12px] xl:my-[24px]">
               <h6 className="text-[20px] mb-[20px] text-secondary   text-center">
                 {/* إشترك معنا الأن */}
                 {t("Subscribe with us now")}
@@ -136,11 +136,11 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
         </div>
         
       </div>
-      <div className="flex justify-center mb-10 !w-full xl:hidden">
+      {/* <div className="flex justify-center mb-10 !w-full xl:hidden">
           <div className="w-full flex justify-center items-end mb-10 max-w-[400px]">
             <SubscriptionCard />
           </div>
-        </div> 
+        </div>   */}
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
       <CustomerOpinions pageDetails={true} reviews={reviewsData?.data} />

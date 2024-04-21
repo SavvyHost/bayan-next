@@ -14,7 +14,7 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
     <>
       {/* Swiper */}
       <div className='mt-[60px] '>
-        <h5 className='text-[30px] font-bold text-center text-primary mb-[24px]'>
+        <h5 className='text-[30px] font-bold text-center text-primary mb-[24px] new-font'>
           {t("trainers")}
           {/* المدربون */}
         </h5>

@@ -13,8 +13,8 @@
   "See More": "عرض المزيد",
   "Customer opinions": "آراء طلابنا",
   "Most important articles": " المقالات",
-  "highlights": "  أهم الإنجازات",
-  "mostImportantArticles": "أهم المقالات",
+  "highlights": "لوحة الشرف",
+  "mostImportantArticles": " المقالات",
   "importantArticlesDescription": "تعليم القرآن الكريم بالأحكام والقراءة والكتابة بطريقة نور البيان عن طريق الهواتف الذكية.",
   "articleTitle": "عنوان المقالة",
   "articleDate": "27 يناير 2024",
@@ -27,7 +27,7 @@
   "viewMore": "عرض المزيد",
   "About us": "من نحن",
   "Sign In" : "الدخول",
-  "Register" : "إنشاء حساب",
+  "Register" : " إنشاء حساب",
   "CoursesPage": {
     "Complete your courses": "  أكمل دوراتك",
     "Description Complete your courses": " تعليم القرءان الكريم بالأحكام والقراءه والكتابة بطريقة نور البيان",
@@ -35,7 +35,7 @@
     "Introduction to the Arabic language": "مدخل الي اللغه العربية",
     "What will you learn": " ماذا ستتعلم؟",
     "Subscribe with us now": "إشترك معنا الأن",
-    "trainers": "المدربون",
+    "trainers": "المعلمون",
     "large group": "ومجموعة كبيرة من معلمين ومعلمات الأزهر الشريف ",
     "See More": "عرض المزيد"
   },
@@ -67,7 +67,7 @@
     "allRightsReserved": "جميع الحقوق محفوظة لموقعنا © 2024"
   },
   "AboutUs": {
-    "About us": "ماذا عننا؟",
+    "About us": "من نحن ؟ ",
     "title": " أكاديمية بيان",
     "description": "أكاديمية بيان",
     "icon1Title": "تحفيظ القرءان",

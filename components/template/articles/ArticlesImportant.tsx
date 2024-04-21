@@ -14,7 +14,7 @@ const ArticlesImportant = ({ data }: any) => {
     <>
       <div className={`container py-[40px] md:my-[50px] ${isRTL ? "rtl" : ""}`}>
         <div className="flex flex-col items-center">
-          <h3 className="text-[29px] lg:text-[34px] text-primary pb-2 font-bold relative w-max mb-3">
+          <h3 className="text-[29px] lg:text-[34px] new-font text-primary pb-2 font-bold relative w-max mb-3">
             {t("mostImportantArticles")}
             <span className="block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]"></span>
           </h3>
@@ -56,7 +56,7 @@ const ArticlesImportant = ({ data }: any) => {
               {t("importantArticles")}
               <span className="block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]"></span>
             </h3>
-            <p className="text-main text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold mt-2">
+            <p className="text-main new-font text-[15px] lg:text-[17px] text-center md:w-[40%] font-semibold mt-2">
               {t("importantArticlesSubtitle")}
             </p>
           </div>

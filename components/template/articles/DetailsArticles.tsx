@@ -29,7 +29,7 @@ const DetailsArticles = ({ textSize, params }: any) => {
       <div className='flex flex-col lg:grid lg:grid-cols-11 gap-x-[50px] gap-y-[40px]'>
         <div className='col-span-7 lg:col-span-6'>
           <p
-            className='text-[#616161]   mt-2'
+            className='text-[#616161]  new-font   mt-2'
             style={{ fontSize: `${textSize}px` }}
           >
             {articleData?.description_ar}
@@ -49,7 +49,7 @@ const DetailsArticles = ({ textSize, params }: any) => {
         <div className='col-span-11'>
           <p
               dangerouslySetInnerHTML={{ __html: articleData?.content_ar }}
-            className='text-[#616161]   mt-2'
+            className='text-[#616161]   mt-2  new-font'
             style={{ fontSize: `${textSize}px` }}
           >
             {/* {articleData?.content_ar} */}

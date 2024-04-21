@@ -13,11 +13,11 @@ const ContactUs = async ({data}:any) => {
     <div className='Contact-us-style'>
       <div className='container my-[70px] lg:my-[100px] flex w-full lg:gap-36 gap-20 lg:px-[80px] flex-col md:!flex-row'>
         <div className='lg:p-[40px] p-[20px] custom-box-shadow bg-white rounded-[8px] w-full order-2 md:order-1'>
-          <h3 className='text-stroke-custom text-[30px] font-bold'>
+          <h3 className='text-stroke-custom text-[30px] font-bold  new-font'>
             {t('title')}
           </h3>
-          <h4 className='text-[#1E1E1E] text-[22px]'>{t('mainOffice')}</h4>
-          <p className='text-main mt-4 lg:w-[85%]'>{t('description')}</p>
+          {/* <h4 className='text-[#1E1E1E] text-[22px]'>{t('mainOffice')}</h4>
+          <p className='text-main mt-4 lg:w-[85%]'>{t('description')}</p> */}
           <div className='my-[24px] flex flex-col gap-[8px]'>
             <h5 className='text-main text-[19px]'>
               {t('phone')}:{' '}

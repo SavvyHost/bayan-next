@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <>
       <div className="  h-[64px] py-[12px] flex items-center bg-[#2260aa]">
-          <div className="flex gap-2 px-4 w-full ">
+          <div className="flex gap-2 px-2 md:px-4 w-full ">
             <button
               type="button"
               className="text-white"
@@ -65,17 +65,17 @@ const Navbar = () => {
             <span className="text-white text-[19px] font-bold">|</span>
             <FaceBookSub className="scale-[0.85]" />
             <YouTubeSub className="scale-[0.85]" />
-            <InstaSub className="scale-[0.85]" />
+            {/* <InstaSub className="scale-[0.85]" />  */}
           </div>
           <div className="flex justify-end gap-2 items-center w-full px-[10px]">
 
             <Link href='https://app.bayan-academy.com/parents/' target="_blank">
-              <button className=" text-[#2260aa] border border-white bg-white  p-1 md:p-2 md:px-[10px] rounded">
+              <button className=" text-[#2260aa] border border-white bg-white   p-1 md:p-2 md:px-[10px] rounded">
                 {t('Sign In')}
               </button>
             </Link>
             <Link href='https://app.bayan-academy.com/parents/sign-up.php' target="_blank">
-              <button className=" text-white border border-white p-1 px-[6px] md:p-2 md:px-[10px] rounded">
+              <button className=" text-white border border-white p-1   md:p-2 md:px-[10px] rounded">
                 {t('Register')}
               </button>
             </Link>

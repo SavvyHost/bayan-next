@@ -31,7 +31,7 @@ const SecondaryCard: React.FC<SecondaryCardProps> = ({
     <Link href={`/articles/${id}`}>
       <div className='relative animation-translateY '>
         {important && (
-          <div className='absolute -left-[22px] top-[-10px] z-50'>
+          <div className='absolute -left-[5px] top-[-10px] z-50'>
             <BookMark />
           </div>
         )}
