@@ -7,11 +7,16 @@ async function getData() {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  return res.json();
+  return res?.json();
 }
 const ContactUsPage = async () => {
   const data = await getData();
-  return <ContactUs data={data}/>;
+  
+  return (
+    <>
+      <ContactUs data={data} />
+    </>
+  );
 };
 
 export default ContactUsPage;
