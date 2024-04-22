@@ -28,15 +28,14 @@ const CustomerOpinions = ({ pageDetails, reviews }: any) => {
       {pageDetails && (
         <div className='tablet:!block !hidden'>
           <div className='tablet:flex flex-col hidden items-center sm:!grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
-            <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
-              <CustomerCard />
-            </div>
-            <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
-              <CustomerCard />
-            </div>
-            <div className='flex flex-col items-center  mx-auto rounded-[12px]'>
-              <CustomerCard />
-            </div>
+          {reviews.map((item: any) => (
+            <SwiperSlide key={item?.id}>
+              <div className='flex flex-col items-center  max-h-[285px] mx-auto rounded-[12px]'>
+                <CustomerCard item={item} />
+              </div>
+            </SwiperSlide>
+          ))}
+       
           </div>
 
           <div className='flex justify-center w-full'>

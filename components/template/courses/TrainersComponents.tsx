@@ -22,7 +22,7 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
         {pageDetails && (
           <div className='tablet:block hidden'>
             <div className='flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3  gap-8 justify-items-center mt-[40px]'>
-              {data?.map((item: any) => (
+              {data?.slice(0,4).map((item: any) => (
                 <div
                   className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'
                   key={item?.id}
@@ -37,7 +37,7 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
             </div>
             <div className='flex justify-center w-full'>
               <div className='w-max h-[42px] mt-[30px]'>
-                <MainButton title='عرض المزيد' />
+                <MainButton title='عرض المزيد' link='/' />
               </div>
             </div>
           </div>
