@@ -15,7 +15,7 @@ const CustomerOpinions = ({ pageDetails, reviews }: any) => {
   return (
     <div className='my-[80px] customer-review-style '>
       <div className='flex flex-col items-center mb-[50px]'>
-        <h3 className='text-[29px] lg:text-[34px] text-primary new-font  font-bold relative pb-2  mb-3'>
+        <h3 className='text-[29px] lg:text-[34px] text-primary new-font  font-bold relative pb-2  mb-3 new-font'>
          {t("Customer opinions")}
           <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
         </h3>

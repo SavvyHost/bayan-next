@@ -10,7 +10,7 @@ const CompleteCourses = ({ data }: any) => {
   return (
     <div className="container py-[40px] md:my-[50px] ">
       <div className="flex flex-col items-center">
-        <h3 className="text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2  mb-3">
+        <h3 className="text-[29px] lg:text-[34px] text-primary  font-bold relative pb-2  mb-3 new-font">
           {t("Complete your courses")}
           <span className="block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]"></span>
         </h3>
@@ -21,7 +21,7 @@ const CompleteCourses = ({ data }: any) => {
       {/*  */}
       <div className="flex flex-col lg:grid lg:grid-cols-12 mt-[45px] md:mt-[70px] bg-background rounded-[12px] custom-box-shadow-2">
         <div className="col-span-7 flex flex-col gap-6 px-[15px] py-[25px] md:p-[45px] order-2 lg:!order-1">
-          <h3 className="text-[28px] xs:text-[36px] text-primary  ">
+          <h3 className="text-[28px] xs:text-[36px] text-primary   new-font">
             {isRTL ? data?.data[0]?.title_ar : data?.data[0]?.title_en}
           </h3>
 

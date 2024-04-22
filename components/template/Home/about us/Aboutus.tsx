@@ -14,7 +14,7 @@ const AboutUs = () => {
     <div className='my-[35px] about-me-section'>
       <div className='container my-16'>
         <div className='flex flex-col items-center'>
-          <h3 className='text-[29px] lg:text-[34px] text-primary font-bold text-white relative pb-2 mb-3'>
+          <h3 className='text-[29px] lg:text-[34px] text-primary font-bold text-white relative pb-2 mb-3  new-font'>
             {t('title')}
             <span className='block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]'></span>
           </h3>

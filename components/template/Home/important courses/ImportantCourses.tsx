@@ -16,7 +16,7 @@ const ImportantCourses = ({ courses, swiper ,hiddenShowMore }: any) => {
   return (
     <div className="container my-[65px] ">
       <div className="flex flex-col items-center">
-        <h3 className="text-[30px] lg:text-[35px] text-primary new-font  font-bold pb-2 relative mb-3">
+        <h3 className="text-[30px] lg:text-[35px] text-primary  new-font  font-bold pb-2 relative mb-3">
           {t("The most important courses")}
           <span className="block absolute bottom-0 left-0 h-[2px] w-full bg-[#d3971b]"></span>
         </h3>
