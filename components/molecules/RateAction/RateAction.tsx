@@ -5,7 +5,6 @@ const RateAction = () => {
   const [selectedId, setSelectedId] = useState(null);
   const [hoveredId, setHoveredId] = useState(null);
 
-  console.log(selectedId);
 
   const handleHover = (id:any) => {
     setHoveredId(id);
@@ -14,7 +13,6 @@ const RateAction = () => {
   const handleClick = (id:any) => {
     setSelectedId(id);
     setHoveredId(null);
-    console.log(`Clicked on Star ${id}`);
   };
 
   return (

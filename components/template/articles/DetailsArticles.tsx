@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 
 const DetailsArticles = ({ textSize, params }: any) => {
   const [articleData, setArticleData] = useState<any>({});
-  console.log("🚀 ~ DetailsArticles ~ articleData:", articleData)
   useEffect(() => {
     // Function to fetch article data
     const fetchArticleData = async () => {

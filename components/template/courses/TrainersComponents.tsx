@@ -67,12 +67,12 @@ const TrainersComponents = ({ pageDetails, data }: any) => {
                 spaceBetween: 30,
               },
               1024: {
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 30,
               },
             }}
           >
-            {data?.map((item: any) => (
+            {data?.slice(0,4)?.map((item: any) => (
               <SwiperSlide key={item?.id}>
                 <div className='flex flex-col items-center max-w-[280px] sm:max-w-[unset] mx-auto'>
                   <TrainersCard

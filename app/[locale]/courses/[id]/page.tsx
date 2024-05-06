@@ -136,14 +136,8 @@ const CoursesPageId = async ({ params }: { params: { id: string } }) => {
         </div>
         
       </div>
-      {/* <div className="flex justify-center mb-10 !w-full xl:hidden">
-          <div className="w-full flex justify-center items-end mb-10 max-w-[400px]">
-            <SubscriptionCard />
-          </div>
-        </div>   */}
 
-      {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
-      <CustomerOpinions pageDetails={true} reviews={reviewsData?.data} />
+      <CustomerOpinions pageDetails={true} reviews={data?.data?.reviews} />
       
 
       {/* ⭐باصي الداتا من هنا و اعمل لوب جوة */}
