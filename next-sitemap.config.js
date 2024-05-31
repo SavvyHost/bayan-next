@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl:  'https://backend.bayan-academy.com/',
+    siteUrl:  'https://www.bayan-academy.com/',
     // generateRobotsTxt: true, // (optional)
     // ...other options
     transform: async (config, path) => {
