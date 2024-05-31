@@ -28,7 +28,7 @@ export default function RootLayout({
       <head>
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JHCVD723FZ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-20L1PMKC72"
         ></Script>
         <Script id="google-analytics">
           {`
