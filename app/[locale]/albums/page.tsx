@@ -2,7 +2,7 @@ import Album from "@/components/template/album/Album";
 import Highlights from "@/components/template/album/Highlights";
 import React from "react";
 async function getData() {
-  const res = await fetch("https://bayan.savvyhost.io/api/photos", {
+  const res = await fetch("https://backend.bayan-academy.com/api/photos", {
     cache: "no-store",
   });
   if (!res.ok) {

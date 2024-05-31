@@ -1,7 +1,7 @@
 import ContactUs from "@/components/template/contact-us/ContactUs";
 import React from "react";
 async function getData() {
-  const res = await fetch("https://bayan.savvyhost.io/api/settings", {
+  const res = await fetch("https://backend.bayan-academy.com/api/settings", {
     cache: "no-store",
   });
   if (!res.ok) {

@@ -17,7 +17,7 @@ import {
 import DetailsArticles from "@/components/template/articles/DetailsArticles";
 import copy from "clipboard-copy";
 async function getData(id: any) {
-  const res = await fetch(`https://bayan.savvyhost.io/api/posts/${id}`,{  cache: "no-store"});
+  const res = await fetch(`https://backend.bayan-academy.com/api/posts/${id}`,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
