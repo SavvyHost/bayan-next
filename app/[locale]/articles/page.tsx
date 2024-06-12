@@ -2,7 +2,7 @@ import ArticlesImportant from "@/components/template/articles/ArticlesImportant"
 import React from "react";
 
 async function getData() {
-  const res = await fetch("https://backend.bayan-academy.com/api/posts",{  cache: "no-store"});
+  const res = await fetch("https://backend.bayan-acaemy.com/api/posts",{  cache: "no-store"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

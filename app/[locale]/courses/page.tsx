@@ -1,7 +1,7 @@
 import CompleteCourses from "@/components/template/courses/CompleteCourses";
 import React from "react";
 async function getData() {
-  const res = await fetch("https://backend.bayan-academy.com/api/courses", {
+  const res = await fetch("https://backend.bayan-acaemy.com/api/courses", {
     cache: "no-store",
   });
   if (!res.ok) {

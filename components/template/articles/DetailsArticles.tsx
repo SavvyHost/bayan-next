@@ -10,7 +10,7 @@ const DetailsArticles = ({ textSize, params }: any) => {
     const fetchArticleData = async () => {
       try {
         const response = await fetch(
-          `https://backend.bayan-academy.com/api/posts/${params?.id}`
+          `https://backend.bayan-acaemy.com/api/posts/${params?.id}`
         );
         const data = await response.json();
         setArticleData(data?.data);

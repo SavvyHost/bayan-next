@@ -9,14 +9,14 @@ import StepsToJoin from './steps to join/StepsToJoin';
 import TrainersComponents from '../courses/TrainersComponents';
 
 async function getData(locale: any) {
-  const res = await fetch(`https://backend.bayan-academy.com/api/home?lang=${locale}` ,{  cache: "no-store"});
+  const res = await fetch(`https://backend.bayan-acaemy.com/api/home?lang=${locale}` ,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
   return res.json();
 }
 async function getSettingData(locale:any) {
-  const res = await fetch(`https://backend.bayan-academy.com/api/settings?lang=${locale}` ,{  cache: "no-store"});
+  const res = await fetch(`https://backend.bayan-acaemy.com/api/settings?lang=${locale}` ,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
