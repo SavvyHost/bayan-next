@@ -27,7 +27,7 @@ const ImportantArticles = ({ posts }: any) => {
               id={item?.id}
               img={item?.image}
               title={isRTL ? item?.title_ar : item?.title_en}
-              date="27 يناير 2024"
+              date={isRTL ? item?.created_at_ar : item?.created_at_en}
               description={
                 isRTL
                   ? item?.description_ar?.slice(0, 30)

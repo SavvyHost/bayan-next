@@ -13,14 +13,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 async function getData(id: any) {
-  const res = await fetch(`https://backend.bayan-acaemy.com/api/courses/${id}`,{  cache: "no-store"});
+  const res = await fetch(`https://backend.bayan-academy.com/api/courses/${id}`,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
   return res.json();
 }
 async function getReviewsData(locale: any) {
-  const res = await fetch(`https://backend.bayan-acaemy.com/api/reviews?lang=${locale}` ,{  cache: "no-store"});
+  const res = await fetch(`https://backend.bayan-academy.com/api/reviews?lang=${locale}` ,{  cache: "no-store"});
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }

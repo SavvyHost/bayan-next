@@ -6,6 +6,6 @@ export default function robot() {
         allow: "/",
       },
     ],
-    sitemap: `https://backend.bayan-acaemy.com/sitemap.xml`,
+    sitemap: `https://backend.bayan-academy.com/sitemap.xml`,
   };
 }

@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import MainButton from "@/components/atoms/MainButton";
 import SecondaryCard from "@/components/molecules/SecondaryCard/SecondaryCard";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import React from "react";
 
 const ArticlesImportant = ({ data }: any) => {
   const localeActive = useLocale();
@@ -28,7 +26,7 @@ const ArticlesImportant = ({ data }: any) => {
             <h3 className="text-[28px] xs:text-[36px] text-primary">
               {isRTL ? data[0]?.title_ar : data[0]?.title_en}
             </h3>
-            <span className="text-secondary">{t("articleDate")}</span>
+            <span className="text-secondary">{isRTL ? data[0]?.created_at_ar : data[0]?.created_at_en}</span>
             <p className="text-[#616161] xl:pe-[100px]">
               {isRTL ? data[0]?.description_ar : data[0]?.description_en}
             </p>
@@ -71,7 +69,7 @@ const ArticlesImportant = ({ data }: any) => {
                   id={item?.id}
                   img={item?.image}
                   title={isRTL ? item?.title_ar : item?.title_en}
-                  date={t("articleDate")} // Assuming this is dynamic; otherwise, use a translation
+                  date={isRTL ? item?.created_at_ar : item?.created_at_en} // Assuming this is dynamic; otherwise, use a translation
                   description={
                     isRTL
                       ? item?.description_ar.slice(0, 60)
